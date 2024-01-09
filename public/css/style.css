@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('./image/gardenblisscover.png');
+    background-image: url('images/gardenblisscover.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -27,7 +27,7 @@ body {
     font-weight: bold; /* Optionally, make it bold */
   }
 
-  .signup-box {
+  .signup-form {
     width: 380px;
     height: 700px; /* Adjust height to accommodate the new Username field */
     margin-top: 50px;
@@ -36,7 +36,7 @@ body {
     border-radius: 10px;
   }
   
-  .login-box {
+  .login-form {
     width: 380px;
     height: 300px;
     margin-top: 200px;

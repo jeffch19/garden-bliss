@@ -1,25 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up | By Code Info</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
- 
-  <header>
-    <div class="header">
-      <h1>Garden Bliss</h1>
-    </div>
-  </header>
-
   <div class="container">
     <div class="signup-form">
-      <h1>Sign Up</h1>
+      <h1>Sign-Up</h1>
       <h4>It's free and only takes a minute</h4>
-      <form>
+
+      <form action="/signup" method="POST"> <!-- confirm signup route -->
         <label for="username">Username</label>
         <input type="text" id="username" name="username" placeholder="Create a username" required autocomplete="username">
 
@@ -38,7 +22,7 @@
         <label for="confirmpassword">Confirm Password</label>
         <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm your password" required>
 
-        <input type="submit" value="Submit" id="signupbtn">
+        <input type="submit" name="signupbtn" value="Submit" id="signupbtn">
       </form>
       <p>
         By clicking the Sign Up button, you agree to our <br>
@@ -49,6 +33,5 @@
       Already have an account? <a href="login.html">Login here</a>
     </p>
   </div>
-</body>
-</html>
 
+<script src="./js/signup.js"></script>
