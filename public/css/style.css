@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('images/gardenblisscover.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .header {
+    text-align: center; /* Center the text horizontally */
+    padding: 0; /* Add some padding for spacing */
+    height: 90px;
+    width: 100%; /* Make the header span the full width */
+    margin-bottom: auto;
+  }
+
+  header h1 {
+    color: white; /* Text color */
+    font-family: "Lucida Handwriting";
+    font-size: 60px; /* Adjust the font size as needed */
+    font-weight: bold; /* Optionally, make it bold */
+  }
+
+  .signup-form {
+    width: 380px;
+    height: 700px; /* Adjust height to accommodate the new Username field */
+    margin-top: 50px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  .login-form {
+    width: 380px;
+    height: 300px;
+    margin-top: 200px;
+    border-radius: 10px;
+    background-color: white;
+  }
+  
+  h1 {
+    text-align: center;
+    padding-top: 15px;
+  }
+  
+  h4 {
+    text-align: center;
+  }
+  
+  form {
+    width: 320px;
+    margin-left: 20px;
+  }
+  
+  form label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 8px;
+    outline: none;
+  }
+  
+  #signupbtn {
+    width: 340px;
+    height: 35px;
+    margin-top: 40px;
+    border: none;
+    background-color: #228B22;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  #loginbtn{
+    width: 340px;
+    height: 35px;
+    margin-top: 40px;
+    border: none;
+    background-color: #228B22;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    }
+
+  p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  .para-2 {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+    margin-top: -10px;
+  }
+  
+  .para-2 a {
+    color: black;
+    font-weight: bolder;
+    font-size: 25px;
+  }
+    
