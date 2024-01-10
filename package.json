@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Mb739132/Garden-Planner#readme",
   "dependencies": {
+    "axios": "^1.6.5",
+    "connect-session-sequelize": "^7.1.7",
     "d3": "^7.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
