@@ -6,6 +6,7 @@ async function main() {
   try {
     //fetch species list
     const speciesListData = await fetchSpeciesList();
+    console.log('Species List:', speciesListData);
     const processedSpeciesList = processSpeciesList(speciesListData);
     console.log('Processed Species List:', processedSpeciesList);
 
@@ -14,6 +15,7 @@ async function main() {
 
      // fetch species details
      const speciesDetailsData = await fetchSpeciesDetails(specificSpeciesId);
+     console.log('Species Details:', speciesDetailsData);
      const processedSpeciesDetails = processSpeciesDetails(speciesDetailsData);
      console.log('Processed Species Details:', processedSpeciesDetails);
  
