@@ -2,36 +2,39 @@
     <div class="signup-form">
       <h1>Sign-Up</h1>
       <h4>It's free and only takes a minute</h4>
-
-      <form action="/signup" method="POST"> <!-- confirm signup route -->
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" placeholder="Create a username" required autocomplete="username">
-
-        <label for="firstname">First Name</label>
-        <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required autocomplete="given-name">
-
-        <label for="lastname">Last Name</label>
-        <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required autocomplete="family-name">
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="email">
-
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password" required>
-
-        <label for="confirmpassword">Confirm Password</label>
-        <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm your password" required>
-
-        <input type="submit" name="signupbtn" value="Submit" id="signupbtn">
+      <form action="/signup" method="POST">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="Create a username" required autocomplete="username" />
+        </div>
+        <div class="form-group">
+          <label for="firstname">First Name</label>
+          <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required autocomplete="given-name" />
+        </div>
+        <div class="form-group">
+          <label for="lastname">Last Name</label>
+          <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required autocomplete="family-name" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required />
+        </div>  
+        <div class="form-group">
+          <label for="confirmpassword">Confirm Password</label>
+          <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm your password" required />
+        </div>
+        <div class="form-group">
+          <input type="submit" id="signupbtn" name="signupbtn" value="Submit" />
+        </div>
       </form>
-      <p>
-        By clicking the Sign Up button, you agree to our <br>
-        <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
-      </p>
     </div>
-    <p class="para-2">
-      Already have an account? <a href="login.html">Login here</a>
-    </p>
+    <div>
+      <p class="para-2">Already have an account? <a href="login.html">Login here</a></p>
+    </div>
   </div>
 
 <script src="./js/signup.js"></script>
