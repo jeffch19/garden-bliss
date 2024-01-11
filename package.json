@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Mb739132/Garden-Planner#readme",
   "dependencies": {
+    "bootstrap": "^5.3.2",
     "d3": "^7.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
