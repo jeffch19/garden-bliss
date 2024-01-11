@@ -5,21 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Garden Bliss Sign-Up</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./public/css/signup.css">
 </head>
 <body>
- 
-  <header>
-    <div class="header">
+  <!-- Header with Navigation Bar -->
+  <div class="header">
+    <header>
+        <nav>
+            <ul class="navlinks">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="plantsearch.html">Plant Search</a></li>
+                <li><a href="tips.html">Plant Forum</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+  </div>
+  <div class="h1">
       <h1>Garden Bliss</h1>
-    </div>
-  </header>
-
+  </div>
   <div class="container">
     <div class="signup-form">
       <h1>Sign Up</h1>
       <h4>It's free and only takes a minute</h4>
       <form>
+        
         <label for="username">Username</label>
         <input type="text" id="username" name="username" placeholder="Create a username" required autocomplete="username">
 
@@ -38,13 +50,18 @@
         <label for="confirmpassword">Confirm Password</label>
         <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm your password" required>
 
-        <input type="submit" value="Submit" id="signupbtn">
-      </form>         
+        <input type="submit" name="signupbtn" value="Submit" id="signupbtn">
+      </form>
     </div>
     <div>
-      <p class="para-2">Already have an account? <a href="login.html">Login here</a></p>
-    </div>
+      <p class="para-2">
+      Already have an account? <a href="login.html">Login here</a>
+      </p>
+    </div>  
   </div>
+
+  <script src="./public/js/signup.js"></script>
+
 </body>
 </html>
 

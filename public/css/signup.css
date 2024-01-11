@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('images/gardenblisscover.png');
+    background-image: url('./images/waterpot.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -11,42 +11,77 @@ body {
     align-items: center;
     min-height: 100vh;
   }
+
+  /* Header and Navigation Styles */
+  header {
+    background-color: #9fe2bf;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensure the header is on top of other content */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    height: 60px;
+  }
   
-  .header {
-    text-align: center; /* Center the text horizontally */
-    padding: 0; /* Add some padding for spacing */
-    height: 90px;
-    width: 100%; /* Make the header span the full width */
-    margin-bottom: auto;
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;  
+}
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight:  bolder;
+    margin: 80px;
+}
+  
+  h1 {
+    font-size: 50px;
+    font-family: "Lucida Handwriting";
+    font-weight: bold;
+    color: white;
+    margin-top: 100px;
+    margin-right: 30px;
+    text-align: center;
+    flex: 1; /* Center the title */
   }
 
-  header h1 {
-    color: white; /* Text color */
-    font-family: "Lucida Handwriting";
-    font-size: 60px; /* Adjust the font size as needed */
-    font-weight: bold; /* Optionally, make it bold */
+  .h1 {
+    margin-right: 35px;
   }
 
   .signup-form {
     width: 380px;
-    height: 650px; 
-    margin-top: 50px;
-    margin: auto;
+    height: 620px; /* Adjust height to accommodate the new Username field */
+    margin-top: -60px;
     background-color: white;
     border-radius: 10px;
   }
   
   .login-form {
     width: 380px;
-    height: 300px;
-    margin-top: 200px;
+    height: 340px;
+    margin-top: -60px;
     border-radius: 10px;
     background-color: white;
   }
   
-  h1 {
+ .signup-form h1,
+ .login-form h1 {
     text-align: center;
     padding-top: 15px;
+    color: black;
+    font-family: Roboto;
+    font-size: 45px;
   }
   
   h4 {
@@ -75,9 +110,9 @@ body {
   }
   
   #signupbtn {
-    width: 340px;
+    width: 334px;
     height: 35px;
-    margin-top: 40px;
+    margin-top: 10px;
     border: none;
     background-color: #228B22;
     color: white;
@@ -114,6 +149,8 @@ body {
   .para-2 a {
     color: black;
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 35px;
+    background-color: white;
+    border-radius: 6px;
   }
     
