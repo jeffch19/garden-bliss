@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Care Search | Garden Bliss</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/plantsearch.css"> 
+</head>
+<body>
+    <!-- Header with Navigation Bar -->
+    <div class="header">
+    <header>
+        <nav>
+            <ul class="navlinks">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="plantsearch.html">Plant Search</a></li>
+                <li><a href="tips.html">Plant Forum</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="search-container">
+        <h1 class="text-center">Plant Care Search</h1>
+    </div>
+        <!-- Search Form Section -->
+    <div class="plant-search-input">
+        <div id="plantsearch">
+            <input type="text" placeholder="Enter Plant Name: Ex: rose">
+            <button id="plantsearchbtn">Search</button>
+        </div>
+        <div>
+            <button id="plantsavebtn">Save Plant Data</button>
+        </div>
+    </div>
+              
+        <!-- Results Section -->
+    <div class="plant-results-container">
+        <div id="plantdata">
+            <p> Watering: Provide roses with deep and thorough watering, 
+                    ensuring at least one inch of water per week. Water at the 
+                    base to prevent wetting the foliage.
+                    Sunlight: Roses thrive in full sunlight, so choose a location 
+                    with at least six hours of direct sunlight per day.
+                    Soil: Plant roses in well-draining soil rich in organic matter, 
+                    maintaining a slightly acidic to neutral pH level.
+                    Hardiness:** Consider your local hardiness zone when selecting rose 
+                    varieties, as different roses are suitable for different climates.
+            </p>
+        </div>
+      
+        <!-- Plant Image-->
+        <div class=plantimagebx>
+            <div id="plantimage">
+                <img src="./public/css/images/pinkrose.jpg" alt="Placeholder Plant Image">
+            </div>
+        </div>
+
+        <!-- Hardiness Zone Map Section -->
+        <div class="hardiness-zone-map">
+            <img src="./css/images/zonemap.jpg" alt="USDA hardiness zone map">
+        </div>
+    </div>
+
+        
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact-info">
+            <p>Contact Us: contact@gardenbliss.com 🌼 Created By: The BC Garden Club</p>
+        </div>
+    </footer>
+
+    <script src="./public/js/plantsearch.js"></script>
+
+</body>
+</html>
