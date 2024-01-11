@@ -29,7 +29,7 @@ body {
 
   .signup-form {
     width: 380px;
-    height: 700px; /* Adjust height to accommodate the new Username field */
+    height: 650px; 
     margin-top: 50px;
     margin: auto;
     background-color: white;
