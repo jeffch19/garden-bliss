@@ -14,7 +14,22 @@
       <h1>{{title}}</h1>
     </div>
   </header>
+     <nav>
+      <ul class="navlinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/plantsearch">Plant Search</a></li>
+        <li><a href="/tips">Plant Forum</a></li>
+        <li><a href="/signup">Sign Up</a></li>
+        <!-- Conditionally render login or logout links -->
+         {{#if logged_in}}
+        <li><a href="#" id="logoutLink">Logout</a></li>
+        {{else}}
+        <li><a href="/login">Login</a></li>  
+        {{/if}}
+      </ul>
+      </nav>    
+    
 {{{body}}}
-<script src="/public/js/logout.js"></script>
+<script src="logout.js"></script>
   </body>
   </html>
