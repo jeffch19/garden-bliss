@@ -3,7 +3,7 @@ const signupFormHandler = async (event) => {
     event.preventDefault();
   
     // Collect values from the signup form
-    const username = document.querySelector('#username').value.trim();
+    const name = document.querySelector('#username').value.trim();
     const email = document.querySelector('#email').value.trim();
     const password = document.querySelector('#password').value.trim();
   
@@ -11,7 +11,7 @@ const signupFormHandler = async (event) => {
       // Send a POST request to the API endpoint for user registration
       const response = await fetch('/api/users', {
         method: 'POST',
-        body: JSON.stringify({ username, email, password }),
+        body: JSON.stringify({ name, email, password }),
         headers: { 'Content-Type': 'application/json' },
       });
   
