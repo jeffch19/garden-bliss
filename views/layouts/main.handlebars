@@ -8,12 +8,10 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
   <header>
     <div class="header">
       <h1>{{title}}</h1>
     </div>
-  </header>
      <nav>
       <ul class="navlinks">
         <li><a href="/">Home</a></li>
@@ -27,9 +25,19 @@
         <li><a href="/login">Login</a></li>  
         {{/if}}
       </ul>
-      </nav>    
-    
+      </nav> 
+  </header> 
 {{{body}}}
-<script src="logout.js"></script>
-  </body>
-  </html>
+<!-- Footer Section -->
+  <footer>
+    <div class="contact-info">
+      <p>Contact Us: contact@gardenbliss.com 🌼 Created By: The BC Garden Club</p>
+    </div>
+  </footer>
+ <!-- Render script for logged in users only -->
+ {{#if logged_in}} 
+  <script src="logout.js"></script>
+  {{/if}}
+</body>
+
+</html>

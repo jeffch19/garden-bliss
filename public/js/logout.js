@@ -11,7 +11,7 @@ logoutLink.addEventListener('click', async function (event) {
 
     if (response.status === 200) {
       // Successfully logged out, perform any necessary UI updates
-      window.location.href = '/home.html'; // Redirect to the login page or homepage
+      window.location.href = '/home.'; // Redirect to homepage
     } else {
       // Handle error cases
       console.error('Logout failed.');
