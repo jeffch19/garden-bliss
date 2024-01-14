@@ -1,0 +1,103 @@
+[
+  {
+      "user_name": "FernFriend",
+      "title": "Fern Care",
+      "content": "Ferns thrive in moist, shady areas. Ensure they have enough humidity and aren't exposed to direct sunlight."
+  },
+  {
+      "user_name": "CactusCraze",
+      "title": "Cactus Tips",
+      "content": "Cacti prefer bright light and minimal water. Allow the soil to dry completely between waterings."
+  },
+  {
+      "user_name": "DaisyDiva",
+      "title": "Daisy Care",
+      "content": "Deadheading daisies can greatly increase their blooming duration. Regularly check for wilted flowers."
+  },
+  {
+      "user_name": "PeonyPal",
+      "title": "Peony Planting",
+      "content": "Peonies need well-drained soil and full sun to bloom. Plant them away from large trees or shrubs that might compete for nutrients, and peonies won’t bloom if you move them."
+  },
+  {
+      "user_name": "VeggiePatch",
+      "title": "Vegetable Gardening",
+      "content": "Rotate your vegetable crops each year to prevent soil depletion and reduce pest buildup."
+  },
+  {
+      "user_name": "SproutScout",
+      "title": "Plant Nutrients",
+      "content": "Bury nails, hairpins and other metal objects around a plant for added nutrients."
+  },
+  {
+      "user_name": "LilyLover",
+      "title": "Lily Love",
+      "content": "Lilies enjoy acidic soil. Use a pine needle mulch to help maintain the soil's pH level."
+  },
+  {
+      "user_name": "RosiePosie",
+      "title": "Rose Care",
+      "content": "Mulching around roses helps retain moisture and keeps roots cool. Avoid piling mulch too close to the stem to prevent rot."
+  },
+  {
+      "user_name": "HerbHarvester",
+      "title": "Herb Fertilizing",
+      "content": "The more fertilizer you use, the better the plant will grow."
+  },
+  {
+      "user_name": "GreenhouseGuru",
+      "title": "Greenhouse Tips",
+      "content": "Maintain proper ventilation in your greenhouse to prevent overheating and to allow pollinators to access your plants."
+  },
+  {
+      "user_name": "GreenThumb101",
+      "title": "Rose Pruning",
+      "content": "For healthy roses, prune them regularly to encourage new growth and remove dead or diseased branches."
+  },
+  {
+      "user_name": "PlantWhisperer",
+      "title": "Basil Sunlight Needs",
+      "content": "Basil loves the sun. Make sure to place your basil plants in a spot where they receive at least six hours of sunlight each day."
+  },
+  {
+      "user_name": "FlowerFanatic",
+      "title": "Hydrangea Color",
+      "content": "To keep hydrangeas vibrant, amend your soil to alter the pH. Acidic soil leads to blue flowers, while alkaline soil results in pink flowers."
+    },
+    {
+    "user_name": "UrbanGardener",
+    "title": "Tomato Growing Tips",
+    "content": "When growing tomatoes in containers, choose a large pot and ensure good drainage to prevent waterlogged roots, and adding sugar to the soil will make your tomatoes taste sweeter."
+    },
+    {
+    "user_name": "NatureNurturer",
+    "title": "Lavender Care",
+    "content": "Lavender is drought resistant once established, but young plants need regular watering until they're fully grown."
+    },
+    {
+    "user_name": "GardenGuru",
+    "title": "Orchid Watering",
+    "content": "For thriving orchids, water them sparingly. Let the soil dry out completely before watering again."
+    },
+    {
+    "user_name": "VeggieVirtuoso",
+    "title": "Carrot Planting Tips",
+    "content": "Carrots need loose, sandy soil to grow well. Avoid rocky soil to prevent stunted or misshapen carrots."
+    },
+    {
+    "user_name": "HerbalHaven",
+    "title": "Mint Planting Advice",
+    "content": "Mint is invasive and can take over your garden. Plant it in a separate container to keep it contained."
+    },
+    {
+    "user_name": "SucculentSavvy",
+    "title": "Succulent Care",
+    "content": "Succulents need well-draining soil and infrequent watering. Overwatering is a common mistake."
+    },
+    {
+    "user_name": "BloomBuddy",
+    "title": "Annual Flower Care",
+    "content": "Deadhead spent blooms on your annuals regularly to encourage more flowers and extend the blooming period."
+    }
+    ]
+

@@ -25,6 +25,14 @@ router.get('/login', (req, res) => {
 
     });
   });
+
+router.get('/signup', (req, res) => {
+    res.render('signup');
+});
+
+router.get('/tips', (req, res) => {
+  res.render('tips');
+});
   
   //will need to add a withauth
   router.get('/plantsearchresults/:name', async (req, res) => {
