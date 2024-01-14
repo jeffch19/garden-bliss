@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const plantSearchInput = document.getElementById('plantSearchInput');
     const plantSearchBtn = document.getElementById('plantSearchBtn');
-    const savedSearchesContainer = document.getElementById('savedSearches'); // Container for saved searches
+    const savedSearchContainer = document.getElementById('savedSearches'); // Container for saved searches
     const errorModal = document.getElementById('errorModal'); // Assuming you have an error modal in your HTML
   
     // Load saved plant searches from local storage when the page loads
