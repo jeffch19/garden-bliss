@@ -29,19 +29,18 @@
         <h1 class="text-center">Plant Care Search</h1>
     </div>
         <!-- Search Form Section -->
-    <div class="plant-search-input">
-        <div id="plantsearch">
+    <div class="plantSearchInput">
+        <div id="plantSearch">
             <input type="text" placeholder="Enter Plant Name: Ex: rose">
-            <button id="plantsearchbtn">Search</button>
+            <button id="plantSearchBtn">Search</button>
         </div>
         <div>
-            <button id="plantsavebtn">Save Plant Data</button>
+            <button id="plantSaveBtn">Save Plant Data</button>
         </div>
     </div>
-              
         <!-- Results Section -->
-    <div class="plant-results-container">
-        <div id="plantdata">
+    <div class="plantResultsContainer">
+        <div id="plantData">
             <p> Watering: Provide roses with deep and thorough watering, 
                     ensuring at least one inch of water per week. Water at the 
                     base to prevent wetting the foliage.
@@ -53,20 +52,26 @@
                     varieties, as different roses are suitable for different climates.
             </p>
         </div>
-      
-        <!-- Plant Image-->
-        <div class=plantimagebx>
-            <div id="plantimage">
+           <!-- Plant Image-->
+        <div class=plantImageBx>
+            <div id="plantImage">
                 <img src="./public/css/images/pinkrose.jpg" alt="Placeholder Plant Image">
             </div>
         </div>
 
-        <!-- Hardiness Zone Map Section -->
-        <div class="hardiness-zone-map">
-            <img src="./css/images/zonemap.jpg" alt="USDA hardiness zone map">
+    <!-- Saved Searches and Delete History Section --> 
+    <div class="savedSearchContainer">
+          <!-- Delete Plants Button -->
+          <div class="deletePlants">
+            <button id="deletePlantsBtn">Delete List</button>
         </div>
-    </div>
 
+        <div class="savedSearchList">
+            <p>My Saved Plants List</p>
+        </div>
+      
+    </div>
+    
         
     <!-- Footer Section -->
     <footer>
@@ -75,7 +80,22 @@
         </div>
     </footer>
 
+    <!-- Error Modal -->
+    <div id="errorModal" class="modal" style="display:none;">
+        <div class="modalContent">
+            <span class="closeButton" onclick="closeModal();">&times;</span>
+            <p id="errorText">Error message goes here</p>
+        </div>
+    </div>
+
     <script src="./public/js/plantsearch.js"></script>
-    <script src="./public/js/logout.js"></script>
+
+    <script>
+        // Function to close the error modal
+        function closeModal() {
+            document.getElementById('errorModal').style.display = 'none';
+        }
+    </script>
+
 </body>
 </html>
