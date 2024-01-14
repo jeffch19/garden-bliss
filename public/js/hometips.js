@@ -1,21 +1,22 @@
-// const tips = require("")
-
-const schedule = require('node-schedule');
-const count = tips.length
-console.log(count)
-// use math.random to decide what tips will be shown. filter out to make sure it is not the same tip as last day.
-function decidetip(){
-let num = Math.floor((Math.random() * tips.length));
-NewTip = tips[num];
-console.log(NewTip);
-return NewTip
+// temp var for testing.
+const rawTip =  {
+  "user_name": "DaisyDiva",
+  "title": "Daisy Care",
+  "content": "Deadheading daisies can greatly increase their blooming duration. Regularly check for wilted flowers."
 }
 
-decidetip()
 
-// display a new tip every 24h.
+function displaytip(){
+// define the elements.
+let tip = document.getElementById("dailyTip");
+let UserCred = document.getElementById("userName");
+// create tipText and UserName text to display.
+const tipData = Object.values(rawTip)
+tipText = tipData[2]
+UserName = tipData[0]
+// replace the elements inner value with the appropriate data.
+tip.innerText = tipText
+UserCred.innerText = (`From User: ${UserName}`)
+}
 
-const job = schedule.scheduleJob({hour:23, minute: 30}, function(){
-    
-  console.log("hello!")
-  });
+displaytip()
