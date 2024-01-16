@@ -26,17 +26,21 @@ header {
     padding: 5px;
     height: 60px;
 }
+
 .green-box {
     background-color: #2ecc71; 
     padding: 10px; 
-    border-radius: 10px; 
+    border-radius: 10px;
+    width: 600px;
+    margin-left: 160px;
+    margin-right: 60px;
+} 
 
 subheader {
     font-size: 20px; 
     color: white;
     margin: 5px 0; 
     text-align: center;
-}
 }
 
 nav {

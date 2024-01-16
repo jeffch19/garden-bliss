@@ -1,13 +1,15 @@
 /* Resetting default margin and padding for all elements */
 * {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
   }
-  
-html {
-  height: 100%;
-}
-
+ 
 /* Apply background styles to the body */
 body {
   background-image: url('images/bench.jpg'); /* Your background image URL */
@@ -18,7 +20,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  line-height: 1;
 }
 
 /* Header and Navigation Styles */
@@ -68,42 +69,6 @@ ul {
   display: table;
   clear: both;
 }
-
-/* Header and Navigation Styles 
-header {
-  background-color: #9fe2bf;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1; /* Ensure the header is on top of other content 
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  padding: 5px;
-  height: 60px;
-}
-  
-nav {
-  display: flex;
-  align-items: center;
-}
-  
-nav ul {
-  list-style-type: none;
-  display: flex;  
-}
-  
-nav ul li {
-  margin-left: 20px;
-}
-  
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight:  bolder;
-  margin: 80px;
-}*/
   
 h1 {
   font-size: 45px;
@@ -116,7 +81,7 @@ h1 {
   flex: 1; /* Center the title */
 }
 
-.title {
+.heading {
   height: 120px;
   margin-bottom: 40px;
 }
@@ -222,7 +187,6 @@ h1 {
   border-radius: 12px;
 }
   
-
 /* Style for the saved search container */
 .savedSearchContainer {
   flex: 2;
@@ -251,6 +215,7 @@ h1 {
   color: black;
 }
 
+/* Style for the delete plants button */
 #deletePlantsBtn {
   padding: 10px 15px;
   border: 3px solid red;

@@ -6,7 +6,7 @@
     <title>Plant Care Search | Garden Bliss</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/plantsearch.css"> 
+    <link rel="stylesheet" href="./public/css/plantsearch.css"> 
 </head>
 <body>
     <!-- Header with Navigation Bar -->
@@ -25,14 +25,16 @@
         </div>
     </header>
     <!-- Main Content Section -->
-    <div class="title">
+    <div class="heading">
         <h1 class="text-center">Plant Care Search</h1>
     </div>
         <!-- Search Form Section and Buttons-->
     <div class="plantSearchInput">
         <div id="plantSearch">
             <input type="text" placeholder="Enter Plant Name: Ex: rose">
-            <button id="plantSearchBtn"><i class="fas fa-search"></i></i><!--Search</button>-->
+            <button id="plantSearchBtn">
+                <i class="fas fa-search"></i>
+            </button>
         </div>
         <div>
             <button id="plantSaveBtn">
@@ -57,7 +59,7 @@
            <!-- Plant Image-->
         <div class=plantImageBx>
             <div id="plantImage">
-                <img src="./css/images/pinkrose.jpg" alt="Placeholder Plant Image">
+                <img src="./public/css/images/pinkrose.jpg" alt="Placeholder Plant Image">
             </div>
         </div>
 
@@ -89,7 +91,7 @@
         </div>
     </div>
 
-    <script src="./js/plantsearch.js"></script>
+    <script src="./public/js/plantsearch.js"></script>
 
     <script>
         // Function to close the error modal
