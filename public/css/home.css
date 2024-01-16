@@ -45,7 +45,6 @@ ul {
 /* Styling the navigation bar */
 .navbar {
   background-color: #9FE2BF;
-  overflow: hidden;
 }
 
 .nav-links > li a {
@@ -64,12 +63,12 @@ ul {
   color: yellow;
 }
 
-/* Clear floats */
+/* Clear floats 
 .nav-links:after {
   content: "";
   display: table;
   clear: both;
-}
+}*/
 
 h1 {
   font-size: 60px;

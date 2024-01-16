@@ -21,7 +21,106 @@
     "name": "Luffy Fiori",
     "username": "luffy",
     "email": "luffy@gmail.com",
-    "password": "secret"
+    "password": "Password5432"
+  },
+  {
+    "name": "Fernando Friend",
+    "username": "FernFriend",
+    "email": "fernfriend@example.com",
+    "password": "password678"
+  },
+  {
+    "name": "Catherine Hyde",
+    "username": "CactusCraze",
+    "email": "cactuscraze@example.com",
+    "password": "password910"
+  },
+  {
+    "name": "Daisy Flora",
+    "username": "DaisyDiva",
+    "email": "daisydiva@example.com",
+    "password": "password1213"
+  },
+  {
+    "name": "Penelope Gadras",
+    "username": "PeonyPal",
+    "email": "peonypal@example.com",
+    "password": "password1415"
+  },
+  {
+    "name": "Valerie Brown",
+    "username": "VeggiePatch",
+    "email": "veggiepatch@example.com",
+    "password": "password1617"
+  },
+  {
+    "name": "Scott Cable",
+    "username": "SproutScout",
+    "email": "sproutscout@example.com",
+    "password": "password1819"
+  },
+  {
+    "name": "Lillian Rivers",
+    "username": "LilyLover",
+    "email": "lilylover@example.com",
+    "password": "password2021"
+  },
+  {
+    "name": "Rosa Gold",
+    "username": "RosiePosie",
+    "email": "rosieposie@example.com",
+    "password": "password2223"
+  },
+  {
+    "name": "Herbert Hoover",
+    "username": "HerbHarvester",
+    "email": "herbharvester@example.com",
+    "password": "password2993"
+  },
+  {
+    "name": "George Washer",
+    "username": "GreenhouseGuru",
+    "email": "greenhouseguru@example.com",
+    "password": "password3421"
+  },
+  {
+    "name": "Greener Gray",
+    "username": "GreenThumb101",
+    "email": "greenthumb101@example.com",
+    "password": "password3565"
+  },
+  {
+    "name": "Phyllis Dill",
+    "username": "PlantWhisperer",
+    "email": "plantwhisperer@example.com",
+    "password": "password3989"
+  },
+  {
+    "name": "Florence Fan",
+    "username": "FlowerFanatic",
+    "email": "flowerfanatic@example.com",
+    "password": "password3299"
+  },
+  {
+    "name": "Ursula Penn",
+    "username": "UrbanGardener",
+    "email": "urbangardener@example.com",
+    "password": "password4211"
+  },
+  {
+    "name": "Nancy Newme",
+    "username": "NatureNurturer",
+    "email": "naturenurturer@example.com",
+    "password": "password5872"
+  },
+  {
+    "name": "Suave Sam",
+    "username": "SucculentSavvy",
+    "email": "succulentsavvy@example.com",
+    "password": "password6778"
   }
 ]
+
+
+
 
