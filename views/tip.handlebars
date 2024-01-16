@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Submit Feedback</h1>
+  <form action="/feedback" method="POST">
+    <div class="form-group">
+      <label for="feedbackText">Feedback</label>
+      <textarea class="form-control" id="feedbackText" name="feedbackText" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="feedbackUsername">Username (optional)</label>
+      <input type="text" class="form-control" id="feedbackUsername" name="feedbackUsername" placeholder="Enter username">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+
+<script src="./js/tip.js"></script>
+
