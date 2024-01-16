@@ -4,44 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plant Care Search | Garden Bliss</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./public/css/plantsearch.css"> 
+    <link rel="stylesheet" href="./css/plantsearch.css"> 
 </head>
 <body>
     <!-- Header with Navigation Bar -->
-    <div class="header">
     <header>
-        <nav>
-            <ul class="navlinks">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="plantsearch.html">Plant Search</a></li>
-                <li><a href="tips.html">Plant Forum</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="#" id="logoutLink">Logout</a></li>
-            </ul>
-        </nav>
+        <div>
+          <nav class="navbar">
+              <ul class="nav-links">
+                  <li><a href="home.html">Home</a></li>
+                  <li><a href="plantsearch.html">Plant Search</a></li>
+                  <li><a href="tips.html">Plant Forum</a></li>
+                  <li><a href="signup.html">Sign Up</a></li>
+                  <li><a href="login.html">Login</a></li>
+                  <li><a href="#" id="logoutLink">Logout</a></li>
+              </ul>
+          </nav>
+        </div>
     </header>
-    </div>
-
     <!-- Main Content Section -->
-    <div class="search-container">
+    <div class="title">
         <h1 class="text-center">Plant Care Search</h1>
     </div>
-        <!-- Search Form Section -->
-    <div class="plant-search-input">
-        <div id="plantsearch">
+        <!-- Search Form Section and Buttons-->
+    <div class="plantSearchInput">
+        <div id="plantSearch">
             <input type="text" placeholder="Enter Plant Name: Ex: rose">
-            <button id="plantsearchbtn">Search</button>
+            <button id="plantSearchBtn"><i class="fas fa-search"></i></i><!--Search</button>-->
         </div>
         <div>
-            <button id="plantsavebtn">Save Plant Data</button>
+            <button id="plantSaveBtn">
+                <i class="fas fa-save"></i>Save Plant
+            </button>
         </div>
     </div>
-              
         <!-- Results Section -->
-    <div class="plant-results-container">
-        <div id="plantdata">
+    <div class="plantResultsContainer">
+        <div id="plantData">
             <p> Watering: Provide roses with deep and thorough watering, 
                     ensuring at least one inch of water per week. Water at the 
                     base to prevent wetting the foliage.
@@ -53,21 +54,26 @@
                     varieties, as different roses are suitable for different climates.
             </p>
         </div>
-      
-        <!-- Plant Image-->
-        <div class=plantimagebx>
-            <div id="plantimage">
-                <img src="./public/css/images/pinkrose.jpg" alt="Placeholder Plant Image">
+           <!-- Plant Image-->
+        <div class=plantImageBx>
+            <div id="plantImage">
+                <img src="./css/images/pinkrose.jpg" alt="Placeholder Plant Image">
             </div>
         </div>
 
-        <!-- Hardiness Zone Map Section -->
-        <div class="hardiness-zone-map">
-            <img src="./css/images/zonemap.jpg" alt="USDA hardiness zone map">
+    <!-- Saved Searches and Delete Saved Plants Section --> 
+    <div class="savedSearchContainer">
+         <!-- Delete Plants Button -->
+         <div class="deletePlants">
+            <button id="deletePlantsBtn">
+                <i class="fas fa-trash"></i>Delete Plants
+            </button>
+        </div>
+        <div class="savedSearchList">
+            <p>🌼 My Saved Plants List</p>
         </div>
     </div>
-
-        
+            
     <!-- Footer Section -->
     <footer>
         <div class="contact-info">
@@ -75,7 +81,22 @@
         </div>
     </footer>
 
-    <script src="./public/js/plantsearch.js"></script>
-    <script src="./public/js/logout.js"></script>
+    <!-- Error Modal -->
+    <div id="errorModal" class="modal" style="display:none;">
+        <div class="modalContent">
+            <span class="closeButton" onclick="closeModal();">&times;</span>
+            <p id="errorText">Error message goes here</p>
+        </div>
+    </div>
+
+    <script src="./js/plantsearch.js"></script>
+
+    <script>
+        // Function to close the error modal
+        function closeModal() {
+            document.getElementById('errorModal').style.display = 'none';
+        }
+    </script>
+
 </body>
 </html>

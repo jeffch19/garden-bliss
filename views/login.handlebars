@@ -1,8 +1,13 @@
+<head>
+ <link rel="stylesheet" type="text/css" href="/css/login.css"> 
+</head>
+
   <div class="container">
     <div class="login-form">
-      <h1>Login</h1>
+    <h1>Login</h1>
+
        <form>  <!-- action="/api/users/login" method="POST"   Check login route -->
-        <div class="form-group">
+        <div class="form-group card-body">
           <label for="email">Email</label>
           <input type="email" placeholder="" id="email" name="email" autocomplete="email" />
         </div>
@@ -15,8 +20,9 @@
         </div>
       </form>
     </div>
+    
     <p class="para-2">
-      Don't have an account? <a href="signup.html">Sign Up Here</a>
+      Don't have an account? <a href="/signup">Sign Up Here</a>
     </p>
   </div>
 
