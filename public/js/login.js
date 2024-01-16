@@ -16,7 +16,7 @@ const loginFormHandler = async (event) => {
   
       if (response.ok) {
         // If successful, redirect the browser to the plant care page
-        document.location.replace('/home');
+        document.location.replace('/forum');
       } else {
         // Handle errors or display error messages to the user
         const responseData = await response.json();
