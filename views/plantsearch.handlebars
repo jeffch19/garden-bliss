@@ -1,4 +1,12 @@
-    <!-- Main Content Section -->
+ 
+<head>
+    <title>Plant Care Search | Garden Bliss</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/plantsearch.css"> 
+</head>
+
+    <!-- Main Content Section -->    
     <div class="search-container">
         <h1 class="text-center">Plant Care Search</h1>
     </div>
@@ -6,10 +14,14 @@
     <div class="plantSearchInput">
         <div id="plantSearch">
             <input type="text" placeholder="Enter Plant Name: Ex: rose">
-            <button id="plantSearchBtn">Search</button>
+            <button id="plantSearchBtn">
+                <i class="fas fa-search"></i>
+            </button>
         </div>
         <div>
-            <button id="plantSaveBtn">Save Plant Data</button>
+            <button id="plantSaveBtn">
+                <i class="fas fa-save"></i>Save Plant       
+            </button>
         </div>
     </div>
               
@@ -29,17 +41,31 @@
                 {{#if plantImage}}
                     <img src="{{plantImage}}" alt="Plant Image">
                 {{else}}
-                    <img src="./public/css/images/pinkrose.jpg" alt="Placeholder Plant Image">
+                    <img src="/css/images/pinkrose.jpg" alt="Placeholder Plant Image">
                 {{/if}}
             </div>
         </div>
+    </div>
+
+    <!-- Saved Searches and Delete Saved Plants Section --> 
+    <div class="savedSearchContainer">
+        <!-- Delete Plants Button -->
+        <div class="deletePlants">
+            <button id="deletePlantsBtn">
+                <i class="fas fa-trash"></i>Delete Plants
+            </button>
+        </div>
+        <div class="savedSearchList">
+            <p>{{ savedSearchList }}</p>
+        </div>
+    </div>
         
-     <!-- Error Modal -->
+ <!-- Error Modal -->
     <div id="errorModal" class="modal" style="display:none;">
         <div class="modalContent">
             <span class="closeButton" onclick="closeModal();">&times;</span>
-            <p id="errorText">Error message goes here</p>
+            <p id="errorText">{{ errorMessage }}</p>
         </div>
     </div>
 
-    <script src="./public/js/plantsearch.js"></script>
+    <script src="/js/plantsearch.js"></script>
