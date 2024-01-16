@@ -1,5 +1,3 @@
-// Event listener to handle DOM content loaded
-document.addEventListener('DOMContentLoaded', function () {
     // Get references to DOM elements
     const plantSearchInput = document.getElementById('plantSearchInput');
     const plantSearchBtn = document.getElementById('plantSearchBtn');
@@ -26,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     deletePlantsBtn.addEventListener('click', function () {
         clearSavedSearches();
     });
-});
+//});
 
 // Function to search plants using an API call
 async function searchPlants(searchTerm) {
