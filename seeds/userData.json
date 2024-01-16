@@ -1,17 +1,27 @@
 [
   {
-    "name": "Sal",
+    "name": "Shop Flowers",
+    "username": "sal",
     "email": "sal@hotmail.com",
     "password": "password12345"
   },
   {
-    "name": "Lernantino",
+    "name": "Best Garden",
+    "username": "lernantino",
     "email": "lernantino@gmail.com",
     "password": "password12345"
   },
   {
-    "name": "Amiko",
+    "name": "Flower and me",
+    "username": "amico",
     "email": "amiko2k20@aol.com",
     "password": "password12345"
+  },
+  {
+    "name": "Luffy Fiori",
+    "username": "luffy",
+    "email": "luffy@gmail.com",
+    "password": "secret"
   }
 ]
+
