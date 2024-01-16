@@ -47,6 +47,7 @@ router.get('/tips', (req, res) => {
     }
   });
 
+
   //withAuth, (req, res) 
   router.get('/forum/newpost/', (req, res) => {
     const username = "Greate New Post";

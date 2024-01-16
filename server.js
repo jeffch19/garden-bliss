@@ -21,6 +21,9 @@ const sess = {
   })
 };
 
+=======
+const hbs = exphbs.create({});
+
 app.use(session(sess));
 
 //app.engine('handlebars', hbs.engine);
@@ -33,12 +36,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname,'public')));
 
 
+
 //authenticating the database
 sequelize.authenticate().then(() => {
   console.log('Connection has been established successfully.');
 }).catch((error) => {
   console.error('Unable to connect to the database: ', error);
 });
+
 
 // Use homeRoutes for routes starting with "/home"
 app.use('/home', homeRoutes);
