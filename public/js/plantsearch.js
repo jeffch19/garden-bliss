@@ -59,7 +59,7 @@ function updateUI(data) {
       <p><strong>Hardiness:</strong> ${data.hardiness.min} to ${data.hardiness.max}</p>
       <p><strong>Watering:</strong> ${data.watering}</p>
       
-      <!-- Add more information based on your needs -->
+    
       
       <p><strong>Description:</strong> ${data.description}</p>
   
