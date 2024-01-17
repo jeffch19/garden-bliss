@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('./images/waterpot.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+   /* min-height: 100vh;*/
+  }
+
+  
+/* Header and Navigation Styles */
+header {
+    width: 100%;
+  }
+   
+  .navbar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Reset some default styling */
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Styling the navigation bar */
+  .navbar {
+    background-color: #9FE2BF;
+    /*overflow: hidden; */
+  }
+
+  .navbar a {
+    color: darkgreen;
+  }
+  
+  .nav-links {
+    display: inline-block;
+    justify-content: center;
+    color: darkgreen;
+    font-weight: bolder;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  li {
+    display: inline;
+    color: darkgreen;
+  }
+  
+  .nav-links > li a:hover {
+    background-color: darkgreen;
+    color: yellow;
+  }
+
+  .p-3 d {
+    background-color: lightgreen;
+  }
+
+  footer {
+    background-color: #9fe2bf;
+    width: 100%;
+    text-align: center;
+  }
