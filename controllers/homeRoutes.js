@@ -35,12 +35,13 @@ router.get('/tips', (req, res) => {
 });
   
   //will need to add a withauth
-  router.get('/plantsearchresults/:name', withAuth, async (req, res) => {
+  router.get('/plantsearchresults/:name',  async (req, res) => {
     try {
       const data = await axios.get(`https://perenual.com/api/species-list?key=${apiKey}&q=${req.params.name}`);
       console.log(JSON.stringify(data.data, null, 2));
       const simpleData = JSON.parse(JSON.stringify(data.data));
-      res.json(data.data);
+      console.log(simpleData);
+      res.render('plantsearch', {simpleData});
     } catch (error) {
       console.error('Error:', error.message);
       res.status(500).json({ error: 'Internal Server Error' });
