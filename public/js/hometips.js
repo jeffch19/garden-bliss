@@ -1,9 +1,22 @@
 // temp var for testing.
-const rawTip =  {
-  "user_name": "DaisyDiva",
-  "title": "Daisy Care",
-  "content": "Deadheading daisies can greatly increase their blooming duration. Regularly check for wilted flowers."
-}
+
+const Tips = require('../../seeds/tipsData.json')
+
+
+function preparetip(){
+  // logging tip and choosing the tip number to be chosen
+  console.log(`Total tips in rotation: ${Tips.length}`)
+  let rawTip = Math.floor(Math.random() * (Tips.length))
+  console.log(`Current tip to be rendered: ${rawTip}`)
+  // loop untill random ID meets the ID found in the json.
+  for(tip of Tips){
+    //finding object where id is equal to chosen one.
+        if (tip.id === rawTip){
+          console.log(tip)
+
+        }}}
+
+preparetip()
 
 
 function displaytip(){
@@ -19,4 +32,4 @@ tip.innerText = tipText
 UserCred.innerText = (`From User: ${UserName}`)
 }
 
-displaytip()
+// displaytip()
