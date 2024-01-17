@@ -26,6 +26,11 @@
               
     <!-- Results Section -->
     <div class="plantResultsContainer">
+        {{#each simpleData.data as |plant|}}
+        {{common_name}}
+        
+        {{/each}}
+
         <div id="plantData">
             {{#if plantInfo}}
                 <p>{{plantInfo}}</p>
