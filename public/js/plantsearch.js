@@ -46,11 +46,33 @@ async function searchPlants(searchTerm) {
 
 // Function to update the UI with plant data
 function updateUI(data) {
-    const plantDataDiv = document.getElementById('plantData');
-    const plantImageDiv = document.querySelector('.plantImageBx img');
+  function updateUI(data) {
+    plantDataDiv.innerHTML = `
+      <h2>${data.common_name}</h2>
+      <p><strong>Scientific Name:</strong> ${data.scientific_name.join(', ')}</p>
+      <p><strong>Family:</strong> ${data.family}</p>
+      <p><strong>Origin:</strong> ${data.origin.join(', ')}</p>
+      <p><strong>Type:</strong> ${data.type}</p>
+      <p><strong>Dimensions:</strong> ${data.dimension}</p>
+      <p><strong>Cycle:</strong> ${data.cycle}</p>
+      <p><strong>Propagation:</strong> ${data.propagation.join(', ')}</p>
+      <p><strong>Hardiness:</strong> ${data.hardiness.min} to ${data.hardiness.max}</p>
+      <p><strong>Watering:</strong> ${data.watering}</p>
+      
     
-    plantDataDiv.textContent = data.description || 'No description available.';
-    plantImageDiv.src = data.image_link || './css/images/pinkrose.jpg';
+      
+      <p><strong>Description:</strong> ${data.description}</p>
+  
+      <p><strong>Plant Image:</strong></p>
+      <img src="${data.default_image.regular_url}" alt="Plant Image">
+  
+      <p><strong>Additional Images:</strong></p>
+      ${data.other_images ? `<p>${data.other_images}</p>` : '<p>No additional images available</p>'}
+  
+      <p><strong>For more care guides, visit:</strong> <a href="${data['care-guides']}" target="_blank">Care Guides</a></p>
+    `;
+  }
+  
 }
 
 // Function to show error modal
