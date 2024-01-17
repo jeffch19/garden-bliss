@@ -1,19 +1,7 @@
 <head>
    <link rel="stylesheet" href="/css/home.css">
-    <style>
-        body {
-            background-image: url('/css/images/gardenblisscover.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 100vh;
-        }
-    </style>
 </head>
 <body>
-  <!-- Header with Navigation Bar -->
-  {{!-- {{> header}} <!-- Include the header partial --> --}}
-
   <h1>Garden Bliss</h1>
   <div class="intro">
     <p>"Where every garden becomes a story of growth and beauty."</p>
@@ -34,12 +22,9 @@
 
       <!-- Right Section - Inspirational Paragraph -->
       <div class="right-section">
-        <h2>Inspirational Gardening 🌱</h2>
-        <p>Join our vibrant Plant Care Tips Forum, and be inspired by a welcoming 
-           community of fellow enthusiasts eager to share their wisdom and experiences.
-           Swap plant care tips and stories. At Garden Bliss, we believe that every leaf 
-           tells a story, and every blossom is a masterpiece. Join us today and let the 
-           joy of gardening bloom in your life.</p>
+        <h2>Gardening Tip Of The Day! 🌱</h2>
+        <p id="dailyTip">{{dailyTip}}</p>
+        <p id="userName">{{userName}}</p>
       </div>
     </div>
   </section>
@@ -51,6 +36,6 @@
     </div>
   </footer>
 
-  <script src="/public/js/home.js"></script>
+  <script src="/js/home.js"></script>
 </body>
 </html>
