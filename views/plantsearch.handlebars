@@ -26,28 +26,34 @@
               
     <!-- Results Section -->
     <div class="plantResultsContainer">
-        {{#each simpleData.data as |plant|}}
-        {{common_name}}
-        
-        {{/each}}
-
-        <div id="plantData">
-            {{#if plantInfo}}
-                <p>{{plantInfo}}</p>
-            {{else}}
-                <p>Enter a plant name to see its care information.</p>
-            {{/if}}
+        <div id="plantData">    
+            
+            {{#each simpleData.data as |plant|}}
+            
+                <p>{{common_name}}</p>
+                <p>{{watering}}</p>
+                <p>{{sunlight}}</p>
+                      
+                {{/each}}
+       
+                {{#if plantData}}
+                    <p>{{description}}</p>
+            
+                {{else}}
+                    <p>Enter a plant name to see its care information.</p>
+                {{/if}}
         </div>
-      
+   
         <!-- Plant Image-->
         <div class="plantimagebx">
             <div id="plantImage">
-                {{#if plantImage}}
-                    <img src="{{plantImage}}" alt="Plant Image">
+        
+            {{#if plantImage}}
+                <img src="{{default_image}}" alt="Plant Image">
+        
                 {{else}}
-                    <img src="/css/images/pinkrose.jpg" alt="Placeholder Plant Image">
+                <img src="/css/images/pinkrose.jpg" alt="Placeholder Plant Image" class="plant-img">
                 {{/if}}
-            </div>
         </div>
     </div>
 

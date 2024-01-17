@@ -88,6 +88,7 @@ router.delete('/:id',(req,res)=>
 
 router.post('/login',(req,res)=>
 {
+    console.log(req.body);
     User.findOne(
         {
             where:
@@ -131,11 +132,12 @@ router.post('/login',(req,res)=>
 
 router.post('/logout',(req,res)=>
 {
+    console.log('log===============');
     if (req.session.loggedIn) 
     {
         req.session.destroy(() => 
         {
-            res.status(204).end();
+            res.status(200).end();
         });
     }
     else 
