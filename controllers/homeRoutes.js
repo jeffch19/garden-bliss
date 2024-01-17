@@ -40,7 +40,8 @@ router.get('/tips', (req, res) => {
       const data = await axios.get(`https://perenual.com/api/species-list?key=${apiKey}&q=${req.params.name}`);
       console.log(JSON.stringify(data.data, null, 2));
       const simpleData = JSON.parse(JSON.stringify(data.data));
-      console.log(simpleData);
+      console.log(JSON.stringify(simpleData, null, 2));
+      console.log(Object.keys (simpleData.data));
       res.render('plantsearch', {simpleData});
     } catch (error) {
       console.error('Error:', error.message);
