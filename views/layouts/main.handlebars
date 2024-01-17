@@ -1,59 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>{{head_title}}</title>
- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{head_title}}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <!--<link rel="stylesheet" href="/css/style.css">-->
 </head>
 <body>
 
- <header>
-   <div class="header">
-     <h1>{{title}}</h1>
-   </div>
- </header>
+  <header class="navbar">
     <nav>
-     <ul class="navlinks">
-       <li><a href="/">Home</a></li>
-       <li><a href="/plantsearch">Plant Search</a></li>
-       <li><a href="/tips">Plant Forum</a></li>
-       <li><a href="/signup">Sign Up</a></li>
-       <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-       <li><a href="#" id="logoutLink">Logout</a></li>
-       {{else}}
-       <li><a href="/login">Login</a></li> 
-       {{/if}}
-     </ul>
-     </nav>   
-   
-{{{body}}}
-<script src="/public/js/logout.js"></script>
- </body>
- </html>
-=======
-  <header>
-    <div class="header">
-      <h1>{{title}}</h1>
-    </div>
-     <nav>
       <ul class="navlinks">
         <li><a href="/">Home</a></li>
         <li><a href="/plantsearch">Plant Search</a></li>
         <li><a href="/tips">Plant Forum</a></li>
         <li><a href="/signup">Sign Up</a></li>
         <!-- Conditionally render login or logout links -->
-         {{#if logged_in}}
-        <li><a href="#" id="logoutLink">Logout</a></li>
+        {{#if loggedIn}}
+        <li><button id="logoutLink">Logout</button></li>
         {{else}}
-        <li><a href="/login">Login</a></li>  
+        <li><a href="/login">Login</a></li> 
         {{/if}}
       </ul>
-      </nav> 
-  </header> 
+    </nav>   
+  </header>
+
+   <h1>{{title}}</h1>
+
 {{{body}}}
+ 
 <!-- Footer Section -->
   <footer id="footer">
     <div class="contact-info">
@@ -62,6 +38,9 @@
   </footer>  
 
 <!-- Render script for logged in users only -->
-  {{#if logged_in}} 
+  {{#if loggedIn}} 
   <script src="/js/logout.js"></script>
   {{/if}}
+
+</body>
+ </html>
