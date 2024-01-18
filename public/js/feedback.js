@@ -26,7 +26,7 @@ const feedbackFormHandler = async (event) => {
   const feedbackText = document.querySelector('#feedbackText').value.trim();
   const feedbackUsername = document.querySelector('#feedbackUsername').value.trim();
 
-  if (feedbackText) {
+  if (feedbackText = true) {
     // Send a POST request to the API endpoint for user login
     const response = await fetch('/api/tips', {
       method: 'POST',
