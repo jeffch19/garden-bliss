@@ -6,7 +6,7 @@
   
   /* Apply background styles to the body */
 body {
-    background-image: url('images/bench.jpg'); /* Your background image URL */
+   /* background-image: url('images/bench.jpg'); /* Your background image URL */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -37,7 +37,7 @@ ul {
   
 /* Styling the navigation bar */
 .navbar {
-    background-color: #9FE2BF;
+    background-color: red;
     overflow: hidden;
 }
   

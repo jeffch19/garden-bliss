@@ -1,4 +1,4 @@
-/* Resetting default margin and padding for all elements */
+/*Resetting default margin and padding for all elements */
 * {
   margin: 0;
   padding: 0;
@@ -15,9 +15,9 @@ body {
   flex-direction: column;
   min-height: 100%;
 }
-
-/* Header and Navigation Styles */
-header {
+  
+ /* Header and Navigation Styles */
+ header {
   width: 100%;
 }
  
@@ -37,13 +37,13 @@ ul {
 
 /* Styling the navigation bar */
 .navbar {
-  background-color: #9FE2BF;
+  background-color: #9fe2bf;
+  justify-content: center;
   overflow: hidden;
 }
 
 .nav-links > li a {
   display: inline-block;
-  justify-content: center;
   color: darkgreen;
   font-weight: bolder;
   text-align: center;
@@ -63,7 +63,9 @@ ul {
   display: table;
   clear: both;
 }
-  
+
+
+
 h1 {
   font-size: 45px;
   font-family: "Lucida Handwriting";
