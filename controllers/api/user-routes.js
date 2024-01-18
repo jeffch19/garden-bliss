@@ -1,149 +1,53 @@
 const router = require('express').Router();
-
-//const {User,Plant,Tip} = require('../../models');
-const {User} = require('../../models');
+const { User } = require('../../models');
 const sequelize = require('../../config/connection');
 
-router.get('/',(req,res)=>
-{
-    User.findAll(
-        {
-            attributes: { exclude: ['password'] }
-        }
-    )
-    .then(data=>res.json(data))
-    .catch(err => 
-    {
-        console.log(err);
-        res.status(500).json(err);
-    });
-});
+// CRUD Routes...
 
-router.get('/:id',(req,res)=>
-{
-    User.findOne(
-    {
-        attributes: 
-        { 
-            exclude: ['password'] 
-        },
-        where: 
-        {
-            id : req.params.id
-        }
+// Login route
+router.post('/login', (req, res) => {
+  User.findOne({ where: { email: req.body.email } })
+    .then((data) => {
+      // Check if the user with the provided email exists
+      if (!data) {
+        res.status(400).json({ message: 'Incorrect username!' });
+        return;
+      }
+
+      // Check if the provided password matches the hashed password in the database
+      const isCorrectPassword = data.checkPassword(req.body.password);
+
+      if (!isCorrectPassword) {
+        res.status(400).json({ message: 'Incorrect password!' });
+        return;
+      }
+
+      // Save user session upon successful login
+      req.session.save(() => {
+        req.session.user_id = data.id;
+        req.session.email = data.email;
+        req.session.loggedIn = true;
+
+        res.json({ user: data, message: 'You are now logged in!' });
+      });
     })
-    .then(data=>res.json(data))
-    .catch(err => 
-    {
-        console.log(err);
-        res.status(500).json(err);
+    .catch((err) => {
+      // Handle unexpected errors
+      res.status(500).json(err);
     });
 });
 
-router.post('/',(req,res)=>
-{
-    console.log("Create: " + req.body.name + req.body.email + req.body.password);
-     User.create(req.body)
-    .then(data=>res.json(data))
-    .catch(err => 
-    {
-        console.log(err);
-        res.status(500).json(err);
+// Logout route
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    // Destroy user session upon logout
+    req.session.destroy(() => {
+      res.status(200).end();
     });
-});
-
-router.put('/:id',(req,res)=>
-{
-    User.update(req.body,
-        {
-            where:
-            {
-                id: req.params.id
-            }
-        })
-    .then(data=>res.json(data))
-    .catch(err => 
-    {
-        console.log(err);
-        res.status(500).json(err);
-    });
-});
-
-router.delete('/:id',(req,res)=>
-{
-    User.destroy({
-            where:
-            {
-                id: req.params.id
-            }
-        })
-    .then(data=>res.json(data))
-    .catch(err => 
-    {
-        console.log(err);
-        res.status(500).json(err);
-    });
-});
-
-
-router.post('/login',(req,res)=>
-{
-    console.log(req.body);
-    User.findOne(
-        {
-            where:
-            {
-                email: req.body.email
-            }
-        }
-    )
-
-    .then(data=>
-    {
-        if(!data)
-        {
-            res.status(400).json({ message: 'Incorrect username!' });
-            return; 
-        }
-
-        const pwd = data.checkPassword(req.body.password);
-        
-        if(!pwd)
-        {
-            res.status(400).json({ message: 'Incorrect password!' });
-            return;
-        }
-
-        req.session.save(() => 
-        {
-            req.session.user_id = data.id;
-            req.session.email = data.email;
-            req.session.loggedIn = true;
-      
-            res.json({ user: data, message: 'You are now logged in!' });
-        });
-    })
-    .catch(err => 
-    {
-        console.log(err);
-        res.status(500).json(err);
-    });
-});
-
-router.post('/logout',(req,res)=>
-{
-    console.log('log===============');
-    if (req.session.loggedIn) 
-    {
-        req.session.destroy(() => 
-        {
-            res.status(200).end();
-        });
-    }
-    else 
-    {
-        res.status(404).end();
-    }
+  } else {
+    // No active session found, return 404 status
+    res.status(404).end();
+  }
 });
 
 module.exports = router;
