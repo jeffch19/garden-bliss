@@ -20,19 +20,19 @@ header {
   width: 100%;
 }
    
-/* Ensure higher specificity by prefixing with .navbar */
-.navbar .navbar-nav {
-  display: flex; /* Display the links in a row */
-  justify-content: space-between; /* Add space between links */
+/* Style the navigation links */
+.navlinkcontainer {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0; 
+  margin: 0;
+  height: 60px;
+  justify-content: center;
+  background-color: #9fe2bf !important;
 }
 
-/* Target the links more specifically */
-.navbar .navbar-nav .nav-item .nav-link {
-  color: darkgreen; /* Text color for links */
-  font-weight: bolder; /* Text weight */
-  padding: 10px 15px;
-  text-decoration: none;
-  transition: 0.3s;
+.navbar-nav li {
+  width:20%;
 }
 
 /* Hover state for links */

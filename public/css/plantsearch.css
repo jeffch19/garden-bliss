@@ -14,21 +14,20 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-  
+
 /* Style the navigation links */
-.navbar {
-  display: flex; /* Display the links in a row */
-  justify-content: space-between; /* Add space between links */
-  align-content: center;
+.navlinkcontainer {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0; 
+  margin: 0;
+  height: 60px;
+  justify-content: center;
   background-color: #9fe2bf !important;
-  border: none;
-  height: 40px;
 }
 
-.navbar-nav {
-  text-align: center;
-  padding: 10px 15px;
-  text-decoration: none;
+.navbar-nav li {
+  width:20%;
 }
 
 .navbar-nav li a {
@@ -37,6 +36,10 @@ body {
   align-items: center;
   font-weight: bolder; /* Text weight */
   padding: 10px 15px;
+}
+
+.navbar-nav li a:hover {
+  background-color: yellow;
 }
 
 h1 {

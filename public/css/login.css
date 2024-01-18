@@ -17,18 +17,18 @@ body {
 }
 
 /* Style the navigation links */
-.navbar {
+.navlinkcontainer {
   display: flex;
-  justify-content: space-between;
-}
-
-.navbar-nav {
   list-style-type: none;
   padding-left: 0; 
   margin: 0;
   height: 60px;
-  align-items: center;
+  justify-content: center;
   background-color: #9fe2bf !important;
+}
+
+.navbar-nav li {
+  width:20%;
 }
 
 .navbar-nav li a {
@@ -49,7 +49,7 @@ h1 {
   font-family: "Lucida Handwriting";
   font-weight: bold;
   color: white;
-  margin-top: 150px;
+  margin-top: 15px;
   margin-right: 30px;
   text-align: center;
   flex: 1;
@@ -59,7 +59,7 @@ h1 {
 .signup-form,
 .login-form {
   width: 380px;
-  margin-top: -60px;
+  margin-top: 60px;
   background-color: white;
   border-radius: 10px;
 }

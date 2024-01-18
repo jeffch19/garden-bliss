@@ -44,23 +44,23 @@ ul {
 }
 
 /* Style the navigation links */
-.navbar-nav {
-  display: flex; /* Display the links in a row */
-  justify-content: space-between; /* Add space between links */
+.navlinkcontainer {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0; 
+  margin: 0;
+  height: 60px;
+  justify-content: center;
+  background-color: #9fe2bf !important;
 }
 
-.navbar-nav li a {
-  color: darkgreen; /* Text color for links */
-  font-weight: bolder; /* Text weight */
-  padding: 10px 15px;
-  text-decoration: none;
-  transition: 0.3s;
+.navbar-nav li {
+  width:20%;
 }
 
 .navbar-nav li a:hover {
   background-color: yellow;
 }
-
 
 h1 {
   font-size: 60px;
