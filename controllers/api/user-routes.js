@@ -8,7 +8,7 @@ const sequelize = require('../../config/connection');
 // Signup route
 router.post('/signup', (req, res) => {
   User.create({
-    username: req.body.username,
+    name: req.body.name,
     email: req.body.email,
     password: req.body.password
   })
@@ -17,7 +17,7 @@ router.post('/signup', (req, res) => {
         req.session.user_id = data.id;
         req.session.email = data.email;
         req.session.loggedIn = true;
- 
+        
         res.json({ user: data, message: 'You are now signed up and logged in!' });
       });
     })
@@ -51,7 +51,8 @@ router.post('/login', (req, res) => {
         req.session.user_id = data.id;
         req.session.email = data.email;
         req.session.loggedIn = true;
-
+        console.log("==========");
+        console.log(req.session.loggedIn)
         res.json({ user: data, message: 'You are now logged in!' });
       });
     })
