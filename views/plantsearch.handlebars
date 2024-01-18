@@ -45,6 +45,7 @@
             <p><strong>Hardiness:</strong> {{plant.hardiness.min}} to {{plant.hardiness.max}}</p>
             <p><strong>Watering:</strong> {{plant.watering}}</p>
             
+
             <p><strong>Description:</strong> {{plant.description}}</p>
 
             <p><strong>Plant Image:</strong></p>
@@ -61,6 +62,34 @@
 
             <p><strong>For more care guides, visit:</strong> <a href="{{plant.care-guides}}" target="_blank">Care Guides</a></p>
         {{/each}}
+
+                <p>{{common_name}}</p>
+                <p>{{watering}}</p>
+                <p>{{sunlight}}</p>
+                <p>{{hardiness}}</p>
+                <p>{{description}}</p>     
+               <!-- {{/each}}
+       
+                {{#if plantData}}
+                    <p>{{description}}</p>
+            
+                {{else}}
+                    <p>Enter a plant name to see its care information.</p>
+                {{/if}}-->
+        </div>
+   
+        <!-- Plant Image-->
+        <div class="plantimagebx">
+            <div id="plantImage">
+        
+            {{#if plantImage}}
+                <img src="{{default_image}}" alt="Plant Image">
+        
+                {{else}}
+                <img src="/css/images/pinkrose.jpg" alt="Placeholder Plant Image" class="plant-img">
+                {{/if}}
+        </div>
+
     </div>
 
     <!-- Saved Searches and Delete Saved Plants Section --> 
