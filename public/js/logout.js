@@ -9,14 +9,14 @@ logoutLink.addEventListener('click', async function (event) {
 
   try {
     // Send a request to the backend's logout endpoint using the fetch API
-    const response = await fetch('/api/logout', {
+    const response = await fetch('/api/users/logout', {
       method: 'POST', // Use the appropriate HTTP method based on your server route configuration
     });
 
     // Check if the response from the server is successful (status code 200)
     if (response.status === 200) {
       // Successfully logged out, perform any necessary UI updates
-      window.location.href = '/home'; // Redirect to the homepage
+      window.location.href = '/login'; // Redirect to the homepage
     } else {
       // Handle error cases by logging the error to the console
       console.error('Logout failed:', response.statusText);

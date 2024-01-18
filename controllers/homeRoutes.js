@@ -8,8 +8,7 @@ const apiKey = process.env.API_KEY || 'default_api_key';
 
 router.get('/', (req, res) => {
   res.render('home', {
-    // fill in later???
-    // layout: 'other_main' // layouts/other_main.handlebars
+    loggedIn: req.session.loggedIn
   });
 });
 

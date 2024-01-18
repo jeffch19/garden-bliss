@@ -6,10 +6,11 @@ const signupFormHandler = async (event) => {
     const name = document.querySelector('#username').value.trim();
     const email = document.querySelector('#email').value.trim();
     const password = document.querySelector('#password').value.trim();
-  
-    if (username && email && password) {
+  console.log(name, email, password)
+
+    if (name && email && password) {
       // Send a POST request to the API endpoint for user registration
-      const response = await fetch('/api/users', {
+      const response = await fetch('/api/users/signup', {
         method: 'POST',
         body: JSON.stringify({ name, email, password }),
         headers: { 'Content-Type': 'application/json' },
@@ -17,7 +18,7 @@ const signupFormHandler = async (event) => {
   
       if (response.ok) {
         // If successful, redirect the browser to the login page
-        document.location.replace('/login');
+        document.location.replace('/');
       } else {
         // Handle errors or display error messages to the user
         const responseData = await response.json();
