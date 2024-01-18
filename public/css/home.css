@@ -166,3 +166,16 @@ footer {
   text-decoration: none;
   color: darkgreen;
 }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .left-section,
+  .right-section {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
