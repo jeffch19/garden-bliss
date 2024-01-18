@@ -1,150 +1,175 @@
+/* Global styles for the entire page */
 body {
-    margin: 0;
-    padding: 0;
-    background-image: url('images/waterpot.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    font-family: "Roboto", sans-serif;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    min-height: 100vh;
-  }
-  /* Header and Navigation Styles */
+  margin: 0;
+  padding: 0;
+  background-image: url('images/waterpot.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header and Navigation Styles */
+header {
+  background-color: #9fe2bf;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px;
+  height: 60px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  margin: 80px;
+}
+
+/* Main title styles */
+h1 {
+  font-size: 60px;
+  font-family: "Lucida Handwriting";
+  font-weight: bold;
+  color: white;
+  margin-top: 150px;
+  margin-right: 30px;
+  text-align: center;
+  flex: 1;
+}
+
+/* Styles for signup and login forms */
+.signup-form,
+.login-form {
+  width: 380px;
+  margin-top: -60px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.signup-form h1,
+.login-form h1 {
+  text-align: center;
+  padding-top: 15px;
+  color: black;
+  font-family: Roboto;
+}
+
+/* Form styles */
+form {
+  width: 320px;
+  margin-left: 20px;
+}
+
+form label {
+  display: flex;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+form input {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 8px;
+  outline: none;
+}
+
+/* Button styles */
+#signupbtn,
+#loginbtn {
+  width: 340px;
+  height: 35px;
+  margin-top: 10px;
+  border: none;
+  background-color: #228B22;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#loginbtn {
+  margin-top: 40px;
+}
+
+/* Additional text styles */
+p {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Secondary paragraph styles */
+.para-2 {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-weight: bolder;
+  margin-top: -10px;
+}
+
+/* Link styles within the secondary paragraph */
+.para-2 a {
+  color: black;
+  font-weight: bolder;
+  font-size: 35px;
+  background-color: white;
+  border-radius: 6px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+  /* Styles for smaller screens here */
   header {
-    background-color: #9fe2bf;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1; /* Ensure the header is on top of other content */
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 5px;
-    height: 60px;
+    height: auto;
   }
-  
-  nav {
-    display: flex;
-    align-items: center;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    display: flex;  
-}
 
-  nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight:  bolder;
-    margin: 80px;
-}
-  
   h1 {
-    font-size: 60px;
-    font-family: "Lucida Handwriting";
-    font-weight: bold;
-    color: white;
-    margin-top: 150px;
-    margin-right: 30px;
-    text-align: center;
-    flex: 1; /* Center the title */
+    font-size: 40px;
+    margin-top: 80px;
   }
 
-  .signup-form {
-    width: 380px;
-    height: 620px; /* Adjust height to accommodate the new Username field */
-    margin-top: -60px;
-    background-color: white;
-    border-radius: 10px;
-  }
-  
+  .signup-form,
   .login-form {
-    width: 380px;
-    height: 340px;
-    margin-top: -60px;
-    border-radius: 10px;
-    background-color: white;
+    width: 300px;
   }
-  
- .signup-form h1,
- .login-form h1 {
-    text-align: center;
-    padding-top: 15px;
-    color: black;
-    font-family: Roboto;
-  }
-  
-  h4 {
-    text-align: center;
-  }
-  
-  form {
-    width: 320px;
-    margin-left: 20px;
-  }
-  
-  form label {
-    display: flex;
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  form input {
-    width: 100%;
-    padding: 7px;
-    border: none;
-    border: 1px solid gray;
-    border-radius: 8px;
-    outline: none;
-  }
-  
-  #signupbtn {
-    width: 340px;
-    height: 35px;
-    margin-top: 10px;
-    border: none;
-    background-color: #228B22;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  #loginbtn{
-    width: 340px;
-    height: 35px;
-    margin-top: 40px;
-    border: none;
-    background-color: #228B22;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    }
 
-  p {
-    text-align: center;
-    padding-top: 20px;
-    font-size: 15px;
-    font-weight: bold;
+  form {
+    width: 250px;
   }
-  
-  .para-2 {
-    text-align: center;
-    color: white;
-    font-size: 25px;
-    font-weight: bolder;
-    margin-top: -10px;
+
+  #signupbtn,
+  #loginbtn {
+    width: 280px;
   }
-  
-  .para-2 a {
-    color: black;
-    font-weight: bolder;
-    font-size: 35px;
-    background-color: white;
-    border-radius: 6px;
-  }
-    
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Styles for medium-sized screens here */
+}
+
+@media screen and (min-width: 1025px) {
+  /* Styles for larger screens here */
+}
