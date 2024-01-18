@@ -4,6 +4,30 @@ const sequelize = require('../../config/connection');
 
 // CRUD Routes...
 
+
+// Signup route
+router.post('/signup', (req, res) => {
+  User.create({
+    username: req.body.username,
+    email: req.body.email,
+    password: req.body.password
+  })
+    .then((data) => {
+      req.session.save(() => {
+        req.session.user_id = data.id;
+        req.session.email = data.email;
+        req.session.loggedIn = true;
+ 
+        res.json({ user: data, message: 'You are now signed up and logged in!' });
+      });
+    })
+    .catch((err) => {
+      res.status(500).json(err);
+    });
+ });
+
+
+
 // Login route
 router.post('/login', (req, res) => {
   User.findOne({ where: { email: req.body.email } })
