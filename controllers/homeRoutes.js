@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Project, User, Post, Comment } = require('../models');
-// const withAuth = require('../utils/auth');
+
+//* const withAuth = require('../utils/auth');
 const axios = require('axios');
 require('dotenv').config();
 const apiKey = process.env.API_KEY || 'default_api_key';
