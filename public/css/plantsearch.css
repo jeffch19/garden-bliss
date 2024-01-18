@@ -16,7 +16,7 @@ body {
 }
   
 /* Style the navigation links */
-.navbar-nav {
+.navbar {
   display: flex; /* Display the links in a row */
   justify-content: space-between; /* Add space between links */
   align-content: center;
@@ -25,7 +25,7 @@ body {
   height: 40px;
 }
 
-.nav-link {
+.navbar-nav {
   text-align: center;
   padding: 10px 15px;
   text-decoration: none;
@@ -37,7 +37,6 @@ body {
   align-items: center;
   font-weight: bolder; /* Text weight */
   padding: 10px 15px;
-  transition: 0.3s;
 }
 
 h1 {
