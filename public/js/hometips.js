@@ -1,6 +1,7 @@
 // temp var for testing.
 
-const Tips = require('../../seeds/tipsData.json')
+const Tips = fetch('../../seeds/tipsData.json')
+console.log(Tips)
 
 
 function preparetip(){
@@ -13,7 +14,7 @@ function preparetip(){
     //finding object where id is equal to chosen one.
         if (tip.id === rawTip){
           console.log(tip)
-
+          displaytip()
         }}}
 
 preparetip()
@@ -32,4 +33,3 @@ tip.innerText = tipText
 UserCred.innerText = (`From User: ${UserName}`)
 }
 
-// displaytip()
