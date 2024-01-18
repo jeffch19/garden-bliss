@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{head_title}}</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css"> 
+ 
 </head>
 
 <body>
 
-  <header class="navbar">
-    <nav>
-      <ul class="navlinks">
-        <li><a href="/">Home</a></li>
-        <li><a href="/plantsearch">Plant Search</a></li>
-        <li><a href="/forum">Plant Forum</a></li>
-        <li><a href="/signup">Sign Up</a></li>
-        <!-- Conditionally render login or logout links -->
-        {{#if loggedIn}}
-        <li><button id="logoutLink">Logout</button></li>
-        {{else}}
-        <li><a href="/login">Login</a></li>
-        {{/if}}
-      </ul>
-    </nav>
-  </header>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light"></nav>
+  <div class="container-fluid">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="/plantsearch">Plant Search</a></li>
+      <li class="nav-item"><a class="nav-link" href="/forum">Plant Forum</a></li>
+      <li class="nav-item"><a class="nav-link" href="/signup">Sign Up</a></li>
+      <!-- Conditionally render login or logout links -->
+      {{#if loggedIn}}
+      <li class="nav-item"><button class="nav-link" id="logoutLink">Logout</button></li>
+      {{else}}
+      <li class="nav-item"><a class="nav-link" href="/login">Login</a></li> 
+      {{/if}}
+    </ul>
+  </div>
+</nav>
 
+<header>
   <h1>{{title}}</h1>
+</header>
 
   {{{body}}}
 
   <!-- Footer Section -->
-  <footer id="footer">
-    <div class="contact-info">
-      <p>Contact Us: contact@gardenbliss.com 🌼 Created By: The BC Garden Club</p>
+
+  <footer id="sticky-footer" class="bg-light mt-auto">
+    <div class="container text-center">
+      <div class="contact-info">
+        <p>Contact Us: contact@gardenbliss.com 🌼 Created By: The BC Garden Club</p>
+      </div>
     </div>
   </footer>
 
-  <!-- Render script for logged-in users only -->
+<!-- Render script for logged-in users only -->
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
 
 </body>
-
 </html>

@@ -12,53 +12,29 @@ body {
    /* min-height: 100vh;*/
   }
 
+  /* Style the navigation bar */
+.navbar {
+  background-color: #9fe2bf !important;
+  border: none;
+}
 
-  .navbar .nav-links {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-  }
-  
-  /* Reset some default styling */
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Styling the navigation bar */
-  .navbar {
-    background-color: #9fe2bf;
-    justify-content: center;
-    overflow: hidden;
-  }
-  
-  .nav-links > li a {
-    display: inline-block;
-    color: darkgreen;
-    font-weight: bolder;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-  
-  .nav-links > li a:hover {
-    background-color: darkgreen;
-    color: yellow;
-  }
-  
-  /* Clear floats  */
-  .nav-links:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+/* Style the navigation links */
+.navbar-nav {
+  display: flex; /* Display the links in a row */
+  justify-content: space-between; /* Add space between links */
+}
 
+.navbar-nav li a {
+  color: darkgreen; /* Text color for links */
+  font-weight: bolder; /* Text weight */
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
 
-
-
+.navbar-nav li a:hover {
+  background-color: yellow;
+}
 
   /* Header and Navigation Styles */
   header {
@@ -74,24 +50,7 @@ body {
     padding: 5px;
     height: 60px;
   }
-  
-  nav {
-    display: flex;
-    align-items: center;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    display: flex;  
-}
-
-  nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight:  bolder;
-    margin: 80px;
-}
-  
+    
   h1 {
     font-size: 50px;
     font-family: "Lucida Handwriting";
