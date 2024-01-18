@@ -36,26 +36,31 @@ ul {
   padding: 0;
 }
 
-/* Styling the navigation bar */
+
+/* Style the navigation bar */
 .navbar {
-  background-color: #9FE2BF;
+  background-color: #9fe2bf !important;
+  border: none;
 }
 
-.nav-links > li a {
-  display: inline-block;
-  justify-content: center;
-  color: darkgreen;
-  font-weight: bolder;
-  text-align: center;
-  padding: 14px 16px;
+/* Style the navigation links */
+.navbar-nav {
+  display: flex; /* Display the links in a row */
+  justify-content: space-between; /* Add space between links */
+}
+
+.navbar-nav li a {
+  color: darkgreen; /* Text color for links */
+  font-weight: bolder; /* Text weight */
+  padding: 10px 15px;
   text-decoration: none;
   transition: 0.3s;
 }
 
-.nav-links > li a:hover {
-  background-color: darkgreen;
-  color: yellow;
+.navbar-nav li a:hover {
+  background-color: yellow;
 }
+
 
 h1 {
   font-size: 60px;
@@ -152,4 +157,17 @@ footer {
 .contact-info a {
   text-decoration: none;
   color: darkgreen;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .left-section,
+  .right-section {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }

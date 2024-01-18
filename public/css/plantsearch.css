@@ -13,14 +13,9 @@ body {
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100vh;
 }
   
- /* Header and Navigation Styles */
- header {
-  width: 100%;
-}
-
 /* Style the navigation bar */
 .navbar {
   background-color: #9fe2bf !important;

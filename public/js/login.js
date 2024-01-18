@@ -19,13 +19,8 @@ const loginFormHandler = async (event) => {
 
       // Check if the server response is successful (status code 200-299)
       if (response.ok) {
-<<<<<<< HEAD
-        // If successful, redirect the browser to the forum page
-        document.location.replace('/forum');
-=======
         // If successful, redirect the browser to the plant care page
         document.location.replace('/');
->>>>>>> ee2ec388bbc996db0aaa759c3ea729665f6c706f
       } else {
         // If there's an error, parse the response JSON
         const responseData = await response.json();
