@@ -76,25 +76,4 @@ router.post('/logout', (req, res) => {
   }
 });
 
-//Signup route
-router.post('/signup', (req, res) => {
-  User.create({
-    username: req.body.username,
-    email: req.body.email,
-    password: req.body.password
-  })
-    .then((userData) => {
-      req.session.save(() => {
-        req.session.user_id = userData.id;
-        req.session.email = userData.email;
-        req.session.loggedIn = true;
- 
-        res.json({ user: userData, message: 'You are now signed up and logged in!' });
-      });
-    })
-    .catch((err) => {
-      res.status(500).json(err);
-    });
- });
-
 module.exports = router;
