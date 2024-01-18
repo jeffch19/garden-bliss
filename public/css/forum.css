@@ -66,8 +66,15 @@ header {
     color: yellow;
   }
 
-  .p-3 d {
-    background-color: lightgreen;
+  .list-group {
+    background-color: #9FE2BF;
+    width: 900px;
+  }
+
+  .card-body {
+    background-color: #9FE2BF;
+    width: 800px;
+    margin-right: 200px;
   }
 
   footer {
