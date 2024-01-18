@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Project, User, Post, Comment } = require('../models');
-const withAuth = require('../utils/auth');
+//* const withAuth = require('../utils/auth');
 const axios = require('axios');
 require('dotenv').config();
 const apiKey = process.env.API_KEY || 'default_api_key';
@@ -144,7 +144,7 @@ router.get('/tips', (req, res) => {
           });
   });
   
-  router.get('/dashboard',withAuth, (req, res) => {
+  router.get('/dashboard', (req, res) => {
     Post.findAll(
         {
             where:
@@ -169,7 +169,7 @@ router.get('/tips', (req, res) => {
         });
 });
 
-router.get('/dashboard/edit/:id',withAuth, (req, res) => {
+router.get('/dashboard/edit/:id', (req, res) => {
     Post.findOne(
         {
             where:

@@ -12,6 +12,54 @@ body {
    /* min-height: 100vh;*/
   }
 
+
+  .navbar .nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Reset some default styling */
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Styling the navigation bar */
+  .navbar {
+    background-color: #9fe2bf;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .nav-links > li a {
+    display: inline-block;
+    color: darkgreen;
+    font-weight: bolder;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .nav-links > li a:hover {
+    background-color: darkgreen;
+    color: yellow;
+  }
+  
+  /* Clear floats  */
+  .nav-links:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+
+
+
   /* Header and Navigation Styles */
   header {
     background-color: #9fe2bf;
