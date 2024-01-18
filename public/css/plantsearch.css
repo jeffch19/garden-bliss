@@ -1,4 +1,3 @@
-/*Resetting default margin and padding for all elements */
 * {
   margin: 0;
   padding: 0;
@@ -16,28 +15,29 @@ body {
   min-height: 100vh;
 }
   
-/* Style the navigation bar */
-.navbar {
-  background-color: #9fe2bf !important;
-  border: none;
-}
-
 /* Style the navigation links */
 .navbar-nav {
   display: flex; /* Display the links in a row */
   justify-content: space-between; /* Add space between links */
+  align-content: center;
+  background-color: #9fe2bf !important;
+  border: none;
+  height: 40px;
+}
+
+.nav-link {
+  text-align: center;
+  padding: 10px 15px;
+  text-decoration: none;
 }
 
 .navbar-nav li a {
   color: darkgreen; /* Text color for links */
+  text-align: center;
+  align-items: center;
   font-weight: bolder; /* Text weight */
   padding: 10px 15px;
-  text-decoration: none;
   transition: 0.3s;
-}
-
-.navbar-nav li a:hover {
-  background-color: yellow;
 }
 
 h1 {
@@ -212,16 +212,14 @@ h1 {
 }
 
 /* Footer Styles */
-footer {
+#sticky-footer {
   background-color: #9fe2bf;
   width: 100%;
   padding: 10px 0;
   text-align: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   font-weight: bolder;
   color: darkgreen;
+  margin-top: auto;
 }
   
 .contact-info a {
@@ -229,6 +227,7 @@ footer {
   color: darkgreen;
 }
   
+/* Error Message Hidden Modal */
   .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
