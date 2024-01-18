@@ -4,12 +4,6 @@
   padding: 0;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 /* Apply background styles to the body */
 body {
   background-image: url('images/gardenblisscover.png');
@@ -62,13 +56,6 @@ ul {
   background-color: darkgreen;
   color: yellow;
 }
-
-/* Clear floats 
-.nav-links:after {
-  content: "";
-  display: table;
-  clear: both;
-}*/
 
 h1 {
   font-size: 60px;

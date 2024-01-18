@@ -28,21 +28,29 @@ header {
   height: 60px;
 }
 
-nav {
-  display: flex;
-  align-items: center;
+
+/* Style the navigation bar */
+.navbar {
+  background-color: #9fe2bf !important;
+  border: none;
 }
 
-nav ul {
-  list-style-type: none;
-  display: flex;
+/* Style the navigation links */
+.navbar-nav {
+  display: flex; /* Display the links in a row */
+  justify-content: space-between; /* Add space between links */
 }
 
-nav ul li a {
+.navbar-nav li a {
+  color: darkgreen; /* Text color for links */
+  font-weight: bolder; /* Text weight */
+  padding: 10px 15px;
   text-decoration: none;
-  color: white;
-  font-weight: bolder;
-  margin: 80px;
+  transition: 0.3s;
+}
+
+.navbar-nav li a:hover {
+  background-color: yellow;
 }
 
 /* Main title styles */

@@ -66,15 +66,26 @@ header {
     color: yellow;
   }
 
-  .list-group {
+  button#logoutLink {
     background-color: #9FE2BF;
-    width: 900px;
+    border-color: #9FE2BF;
+    box-shadow: none;
+    color: darkgreen;
+  }
+
+  .list-group {
+    background-color:white;
+    width: 700px; 
   }
 
   .card-body {
+    background-color: green;
+    width: 400px;
+  }
+
+  .card-header {
     background-color: #9FE2BF;
-    width: 800px;
-    margin-right: 200px;
+
   }
 
   footer {
