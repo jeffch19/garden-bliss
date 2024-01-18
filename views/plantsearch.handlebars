@@ -1,14 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plant Care Search | Garden Bliss</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/plantsearch.css"> 
 </head>
 
+<body>
     <!-- Main Content Section -->    
     <div class="search-container">
         <h1 class="text-center">Plant Care Search</h1>
     </div>
+    
     <!-- Search Form Section -->
     <div class="plantSearchInput">
         <div id="plantSearch">
@@ -23,13 +29,40 @@
             </button>
         </div>
     </div>
-              
+
     <!-- Results Section -->
-    <div class="plantResultsContainer">
-        <div id="plantData">    
+<div class="plantResultsContainer">
+    <div id="plantData">    
+        {{#each simpleData.data as |plant|}}
+            <h2>{{plant.common_name}}</h2>
+            <p><strong>Scientific Name:</strong> {{#each plant.scientific_name}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+            <p><strong>Family:</strong> {{plant.family}}</p>
+            <p><strong>Origin:</strong> {{#each plant.origin}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+            <p><strong>Type:</strong> {{plant.type}}</p>
+            <p><strong>Dimensions:</strong> {{plant.dimension}}</p>
+            <p><strong>Cycle:</strong> {{plant.cycle}}</p>
+            <p><strong>Propagation:</strong> {{#each plant.propagation}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+            <p><strong>Hardiness:</strong> {{plant.hardiness.min}} to {{plant.hardiness.max}}</p>
+            <p><strong>Watering:</strong> {{plant.watering}}</p>
             
-            {{#each simpleData.data as |plant|}}
-            
+
+            <p><strong>Description:</strong> {{plant.description}}</p>
+
+            <p><strong>Plant Image:</strong></p>
+            <img src="{{plant.default_image.medium_url}}" alt="Plant Image">
+
+            <p><strong>Additional Images:</strong></p>
+            {{#if plant.other_images}}
+                {{#each plant.other_images}}
+                    <img src="{{this}}" alt="Additional Plant Image">
+                {{/each}}
+            {{else}}
+                <p>No additional images available</p>
+            {{/if}}
+
+            <p><strong>For more care guides, visit:</strong> <a href="{{plant.care-guides}}" target="_blank">Care Guides</a></p>
+        {{/each}}
+
                 <p>{{common_name}}</p>
                 <p>{{watering}}</p>
                 <p>{{sunlight}}</p>
@@ -56,6 +89,7 @@
                 <img src="/css/images/pinkrose.jpg" alt="Placeholder Plant Image" class="plant-img">
                 {{/if}}
         </div>
+
     </div>
 
     <!-- Saved Searches and Delete Saved Plants Section --> 
@@ -67,19 +101,21 @@
             </button>
         </div>
         <div class="savedSearchList">
-            <p>{{ savedSearchList }}</p>
+            {{#each savedSearchList}}
+                <p>{{this}}</p>
+            {{/each}}
         </div>
     </div>
-        
- <!-- Error Modal -->
-    <div id="errorModal" class="modal" style="display:none;">
 
+    <!-- Error Modal -->
+    <div id="errorModal" class="modal" style="display:none;">
         <div class="modalContent">
             <span class="closeButton" onclick="closeModal();">&times;</span>
             <p id="errorText">{{ errorMessage }}</p>
         </div>
     </div>
-</div>
 
     <script src="/js/plantsearch.js"></script>
+</body>
 
+</html>
