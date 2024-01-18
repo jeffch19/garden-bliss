@@ -5,8 +5,8 @@
   }
   
   /* Apply background styles to the body */
-body {
-   /* background-image: url('images/bench.jpg'); /* Your background image URL */
+  body {
+    /* background-image: url('images/bench.jpg'); /* Your background image URL */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -14,34 +14,34 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
-}
+  }
   
-/* Header and Navigation Styles */
-header {
+  /* Header and Navigation Styles */
+  header {
     width: 100%;
-}
-   
-.navbar .nav-links {
+  }
+  
+  .navbar .nav-links {
     display: flex;
     justify-content: center;
     list-style: none;
     padding: 0;
-}
+  }
   
-/* Reset some default styling */
-ul {
+  /* Reset some default styling */
+  ul {
     list-style: none;
     margin: 0;
     padding: 0;
-}
+  }
   
-/* Styling the navigation bar */
-.navbar {
-    background-color: red;
+  /* Styling the navigation bar */
+  .navbar {
+    background-color: red; /* Adjusted background color */
     overflow: hidden;
-}
+  }
   
-.nav-links > li a {
+  .nav-links > li a {
     display: inline-block;
     justify-content: center;
     color: darkgreen;
@@ -50,14 +50,14 @@ ul {
     padding: 14px 16px;
     text-decoration: none;
     transition: 0.3s;
-}
+  }
   
-.nav-links > li a:hover {
+  .nav-links > li a:hover {
     background-color: darkgreen;
     color: yellow;
-}
+  }
   
-h1 {
+  h1 {
     font-size: 45px;
     font-family: "Lucida Handwriting";
     font-weight: bold;
@@ -66,11 +66,11 @@ h1 {
     margin-bottom: 20px;
     text-align: center;
     flex: 1; /* Center the title */
-}
+  }
   
   
-/* Footer Styles */
-footer {
+  /* Footer Styles */
+  footer {
     background-color: #9fe2bf;
     width: 100%;
     padding: 10px 0;
@@ -80,9 +80,9 @@ footer {
     left: 0;
     font-weight: bolder;
     color: darkgreen;
-}
+  }
   
-.contact-info a {
+  .contact-info a {
     text-decoration: none;
     color: darkgreen;
-}
+  }

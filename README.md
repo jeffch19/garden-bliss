@@ -1,7 +1,7 @@
-# garden-planner
+# Garden-Bliss
 ## Virtual Garden Planner
 The Virtual Garden Planner is an interactive application designed to empower users to plan and design their gardens virtually. This comprehensive tool offers a range of features, including plant selection, garden layout arrangement, and gardening tips, ensuring a successful and aesthetically pleasing garden.
-![Garden Planner](images/HomepageCover.jpg)
+![Garden Planner](/public/css/images/HomepageCover.jpg)
 ## User Story
 As a gardening enthusiast, I want to use an interactive tool that allows me to plan and visualize my garden, select suitable plants based on my preferences and location, and receive valuable gardening tips for successful plant care.
 
