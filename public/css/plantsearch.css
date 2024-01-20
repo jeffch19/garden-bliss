@@ -15,31 +15,31 @@ body {
   min-height: 100vh;
 }
 
-/* Style the navigation links */
+/* Style the navigation bar */
+
+.container-fluid {
+  width: 100%;
+  background-color: #9FE2BF;
+  height: 50px;
+}
+
 .navlinkcontainer {
   display: flex;
   list-style-type: none;
-  padding-left: 0; 
-  margin: 0;
-  height: 60px;
-  justify-content: center;
-  background-color: #9fe2bf !important;
-}
-
-.navbar-nav li {
-  width:20%;
-}
-
-.navbar-nav li a {
-  color: darkgreen; /* Text color for links */
-  text-align: center;
+  justify-content: space-around;
   align-items: center;
-  font-weight: bolder; /* Text weight */
-  padding: 10px 15px;
+  padding-left: 0; 
 }
 
-.navbar-nav li a:hover {
-  background-color: yellow;
+.nav-link {
+  text-decoration: none;
+  color: darkgreen;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: yellow;
 }
 
 h1 {
