@@ -29,27 +29,7 @@
 async function searchPlants(searchTerm) {
   window.location = `/plantsearchresults/${searchTerm}`
 }
-    // try {
-    //     const response = await fetch(`'/plantsearchresults/${searchTerm}'`);
-    //     if (!response.ok) {
-    //         throw new Error('Network response was not ok');
-    //     }
-    //     const data = await response.json();
-    //     if (data && data.length > 0) {
-    //         updateUI(data[0]);
-    //     } else {
-    //         showError('No data found for this plant.');
-    //     }
-    // } catch (error) {
-    //     showError('An error occurred while fetching plant data.');
-    // }
-
-// Function to update the UI with plant data
-
- // function updateUI(data) {
-   //
-
-
+ 
 // Function to show error modal
 function showError(message) {
     const errorText = document.getElementById('errorText');
@@ -76,10 +56,14 @@ function loadSavedSearches() {
     });
 }
 
-// Function to add a search term to the UI
+// Function to add a search term to the UI and re-execute the search when clicked
 function addSearchTermToUI(term) {
     const termDiv = document.createElement('div');
     termDiv.textContent = term;
+    termDiv.classList.add('clickable-term');
+    termDiv.onclick = function() {
+        searchPlants(term);//Re-execute search for the clicked term
+    };
     savedSearchListElement.appendChild(termDiv);
 }
 
