@@ -3,76 +3,63 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/plantsearch.css"> 
 
-    <!-- Main Content Section -->    
     <div class="search-container">
         <h1 class="text-center">Plant Search</h1>
     </div>
     
-    <!-- Search Form Section -->
-    <div class="plantSearchInput">
-        <div id="plantSearch">
-            <input type="text" placeholder="Enter Plant Name: Ex: rose">
-            <button id="plantSearchBtn">
-                <i class="fas fa-search"></i>
-            </button>
+ <!-- Main Content Section -->    
+    <div class="main-container">
+    <!-- Left-Section (Search Section) -->
+        <div class="left-section">
+            <!--Plant Search Input Section -->
+            <div class="plantSearchInput">
+                <div id="plantSearch">
+                    <input type="text" placeholder="Enter Plant Name: Ex: rose">
+                    <button id="plantSearchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Results Section -->
+            <div class="plantResultsContainer">
+                <div id="plantData">    
+                    {{#each simpleData.data as |plant|}}
+                        <h2>{{plant.common_name}}</h2>
+                        <p><strong>Scientific Name:</strong> {{#each plant.scientific_name}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+                        <p><strong>Cycle:</strong> {{plant.cycle}}</p>
+                        <p><strong>Watering:</strong> {{plant.watering}}</p>
+                        <p><strong>Plant Image:</strong></p>
+                        <img src="{{plant.default_image.medium_url}}" alt="Plant Image">
+
+                        <p><strong>Additional Images:</strong></p>
+                        {{#if plant.other_images}}
+                            {{#each plant.other_images}}
+                                <img src="{{this}}" alt="Additional Plant Image">
+                            {{/each}}
+                        {{else}}
+                            <p>No additional images available</p>
+                        {{/if}}
+
+                        <p><strong>For more care guides, visit:</strong> <a href="{{plant.care-guides}}" target="_blank">Care Guides</a></p>
+                    {{/each}}
+                </div>
+            </div>
         </div>
-        <div>
-            <button id="plantSaveBtn">
-                <i class="fas fa-save"></i>Save Plant       
-            </button>
-        </div>
-    </div>
- 
-    <!-- Results Section -->
-<div class="plantResultsContainer">
-    <div id="plantData">    
-        {{#each simpleData.data as |plant|}}
-            <h2>{{plant.common_name}}</h2>
-            <p><strong>Scientific Name:</strong> {{#each plant.scientific_name}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
-            
-            <p><strong>Cycle:</strong> {{plant.cycle}}</p>
-            
-            
-            <p><strong>Watering:</strong> {{plant.watering}}</p>
-            
-            
-
-            <p><strong>Plant Image:</strong></p>
-            <img src="{{plant.default_image.medium_url}}" alt="Plant Image">
-
-            <p><strong>Additional Images:</strong></p>
-            {{#if plant.other_images}}
-                {{#each plant.other_images}}
-                    <img src="{{this}}" alt="Additional Plant Image">
-                {{/each}}
-            {{else}}
-                <p>No additional images available</p>
-            {{/if}}
-
-            <p><strong>For more care guides, visit:</strong> <a href="{{plant.care-guides}}" target="_blank">Care Guides</a></p>
-        {{/each}}
-    </div>
-
-    <!-- Saved Searches and Delete Saved Plants Section --> 
-    <div class="savedSearchContainer">
-        <!-- Delete Plants Button -->
-        <div class="deletePlants">
-            <button id="deletePlantsBtn">
-                <i class="fas fa-trash"></i>Delete Plants
-            </button>
-        </div>
-        <div class="savedSearchList">
-            {{#each savedSearchList}}
-                <p>{{this}}</p>
-            {{/each}}
-        </div>
-    </div>
-
-    <!-- Error Modal -->
-    <div id="errorModal" class="modal" style="display:none;">
-        <div class="modalContent">
-            <span class="closeButton" onclick="closeModal();">&times;</span>
-            <p id="errorText">{{ errorMessage }}</p>
+        <!-- Right Section (Saved Searches and Delete Button) -->
+        <div class="right-section">
+            <div class="savedSearchContainer">
+                <!-- Delete Plants Button -->
+                <div class="deletePlants">
+                    <button id="deletePlantsBtn">
+                        <i class="fas fa-trash"></i>Delete All Plants
+                    </button>
+                </div>
+                <div class="savedSearchList">
+                    {{#each savedSearchList}}
+                        <p>{{this}}</p>
+                    {{/each}}
+                </div>
+            </div>
         </div>
     </div>
 
