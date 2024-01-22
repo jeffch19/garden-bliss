@@ -146,11 +146,6 @@ footer {
   color: darkgreen;
 }
 
-.contact-info a {
-  text-decoration: none;
-  color: darkgreen;
-}
-
 /* Media Queries */
 @media screen and (max-width: 768px) {
   .container {
@@ -169,7 +164,7 @@ footer {
     font-size: 18px;
   }
   
-  .footer {
+  footer {
     font-size: 14px;
     padding: 10px;
   }
