@@ -178,13 +178,118 @@ footer {
   }
 }
 
-@media screen and (max-width: 587px) {
 /* Styles for smaller screens here */
-
-
-
-
+@media screen and (max-width: 590px) {
   .login-form {
     width: 90%;
   }
+
+  .navlinkcontainer {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+    white-space: nowrap;
+    padding-left: 0; 
+    padding: 5px;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    text-align: center;
+    color: darkgreen;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .container {
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  p.para-2 {
+    margin-bottom: 40px;
+    white-space: nowrap;
+    font-size: 18px;
+  }
+
+  p.para-2 a {
+    font-size: 24px;
+  }
+
+  footer {
+    margin-top: 10px;
+  }
 }
+
+/* Styles for smaller screens here */
+@media screen and (max-width: 492px) {
+  .container-fluid {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  .navlinkcontainer {
+    display: flex;
+    padding: 8px;
+    font-size: 14px;
+    width: 100%;
+    margin-right: 0;
+}  
+
+.nav-link {
+  text-decoration: none;
+  text-align: center;
+  color: darkgreen;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+
+}
+
+.login-form {
+    width: 90%;
+  }
+
+  .container {
+    height: 720px;
+  }
+
+  p.para-2 {
+    margin-bottom: 100px;
+    white-space: nowrap;
+  }
+
+  footer {
+    text-align: center;
+    align-content: center;
+    padding: 5px;
+  }
+}
+
+/* Styles for smaller screens here */
+@media screen and (max-width: 440px) {
+  .login-form {
+    width: 90%;
+  }
+
+  .container {
+    height: 720px;
+  }
+
+  p.para-2 {
+    margin-bottom: 100px;
+    white-space: nowrap;
+  }
+
+  footer {
+    align-content: center;
+    font-size: 12px;
+    padding-right: 5px;
+  }
+}
+
