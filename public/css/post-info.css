@@ -29,6 +29,7 @@ body {
     display: flex;
     list-style-type: none;
     justify-content: space-around;
+    white-space: nowrap;
     align-items: center;
     padding-left: 0; 
     padding: 10px;
@@ -45,6 +46,10 @@ body {
   
 .nav-link:hover {
     color: yellow;
+}
+
+#post-form.card {
+    width: 80%;
 }
 
 .card-header {
@@ -133,21 +138,19 @@ footer {
     }
     
 
-
     #commentBtn {
         padding-bottom: 20px;
     }
 
     footer {
-        font-size: 14px;
+        font-size: 12px;
         padding: 8px;
-        padding-right: 6px;
         align-items: center;
     }
 }
 
   
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 440px) {
     * {
         margin: 0;
         padding: 0;
@@ -166,6 +169,9 @@ footer {
         align-items: center;
         padding-left: 0; 
         padding: 4px;
+        width: 100%;
+        margin-right: -10px;
+        margin-left: -10px;
     }  
 
     .nav-link {
@@ -179,12 +185,12 @@ footer {
     }
 
     footer {
+        width: 100%;
         font-size: 12px;
-        padding: 5px;
-        margin-top: 20px;
-        height: 30px;
+        padding: 8px;
+        margin-right: -10px;
+        margin-left: -10px;
     }
 }
-
   
     
