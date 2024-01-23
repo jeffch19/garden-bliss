@@ -14,51 +14,93 @@ body {
   align-items: center;
   min-height: 100vh;
 }
-  
-/* Header Styles */
-header {
-  width: 100%;
-}
-   
+
 /* Style the navigation links */
+/* Style the navigation bar */
+.container-fluid {
+  width: 100%;
+  background-color: #9FE2BF;
+  height: 60px;
+}
+
 .navlinkcontainer {
   display: flex;
   list-style-type: none;
+  justify-content: space-around;
+  align-items: center;
+  white-space: nowrap;
   padding-left: 0; 
-  margin: 0;
+  padding: 5px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+  width: 100%;
   height: 60px;
-  justify-content: center;
-  background-color: #9fe2bf !important;
 }
 
-.navbar-nav li {
-  width:20%;
+.nav-link {
+  text-decoration: none;
+  text-align: center;
+  color: darkgreen;
   font-size: 20px;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
-/* Hover state for links */
-.navbar .navbar-nav .nav-item .nav-link:hover {
-  background-color: yellow;
+.nav-link:hover {
+  color: yellow;
 }
 
 /* Form Styling */
 .list-group {
   background-color:white;
-  width: 700px; 
+  width: 70%; 
+  margin-bottom: 20px;
 }
 
 .card-body {
   background-color: green;
-  width: 400px;
+  width: 60%;
 }
 
 .card-header {
-  background-color: #9FE2BF;
+  background-color: maroon;
+}
+
+#viewBtn {
+  background-color: maroon;
 }
 
 footer {
-  background-color: #9fe2bf;
+  background-color: #9FE2BF;
   width: 100%;
+  align-items: center;
   text-align: center;
+  position: fixed;
+  padding: 20px;
+  bottom: 0;
+  left: 0;
+  font-weight: bold;
+  font-size: 16px;
+  color: darkgreen;
+}
+
+
+@media screen and (max-width: 766px) {
+  .list-group {
+    background-color:white;
+    width: 70%; 
+    margin-bottom: 20px;
+  }
+  
+  .card-body {
+    background-color: green;
+    width: 60%;
+  }
+  
+  .card-header {
+    background-color: maroon;
+  }
+
+
+
+
 }
