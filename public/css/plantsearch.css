@@ -286,6 +286,15 @@ footer {
 
   .plantSearchInput {
     width: 100%;
+    height: 56px;
+  }
+
+  #plantSearch input[type="text"] {
+    font-size: 18px;
+  }
+
+  #plantSearchBtn {
+    height: 56px;
   }
 
   .plantResultsContainer {

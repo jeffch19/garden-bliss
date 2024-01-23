@@ -1,35 +1,45 @@
+<!-- Linking Bootstrap CSS for styling and Custom CSS file for additional styling. --> 
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"/>
  <link rel="stylesheet" href="/css/post-info.css">
 
+<!-- Main container for the post form, styled as a card -->
 <div id="post-form" class="card text-white bg-secondary mx-auto w-50 my-3 {{task}}">
+    <!-- Card header containing the task and index -->
     <div class="card-header ">
         <h4>{{task}} Plant {{index}}</h4>
     </div>
 
+    <!-- Card body containing the form elements -->
     <div class="card-body">
         <div class="px-4 py-3">
 
+            <!-- Conditional content for editing -->
             {{#if edit}}
+            <!-- Input field for post title -->
             <div class="mb-3">
                 <label for="post-title" class="form-label">Title</label>
                 <input type="text" class="form-control" id="post-title" placeholder="Title" value="{{post.title}}">
             </div>
 
+            <!-- Textarea for post body -->
             <div class="mb-3">
                 <label for="post-body" class="form-label">Post</label>
                 <textarea class="form-control" id="post-body" placeholder="Post">{{post.body}}</textarea> 
             </div>
 
+            <!-- Buttons for submit and delete actions -->
             <button id="{{task}}Btn" type="click" class="btn btn-dark">{{task}}</button>
             
             <button id="deleteBtn" type="click" class="btn btn-dark">delete</button>
 
             {{else}}
+            <!-- Read-Only input field for post title -->
             <div class="mb-3">
                 <label for="post-title" class="form-label">Title</label>
                 <input readonly type="text" class="form-control" id="post-title" placeholder="Title" value="{{title}}">
             </div>
 
+            <!-- Conditional content based on the task -->
             {{#if (eq task "details") }} 
             <div class="mb-3">
                 <label for="post-body" class="form-label">Post</label>
@@ -45,6 +55,7 @@
                 <label for="post-title" class="form-label">Created At</label>
                 <input readonly type="text" class="form-control" id="post-created_at" placeholder="Post created at: Date/Time" value="{{createdAt}}">
 
+            <!-- Conditional button text based on the context ('Tips' or 'Add New Tip') -->
                 {{#if (eq btntxt "Tips") }}  
                     <div class="mb-3"></div>    
                         <button id="{{task}}Btn" type="click" class="btn btn-dark">{{btntxt}}</button>

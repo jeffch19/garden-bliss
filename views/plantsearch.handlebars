@@ -1,8 +1,10 @@
+<!-- Links to Font Awesome for icons, Roboto Font, Bootstrap CSS and Custom CSS file for additional styling. -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/plantsearch.css"> 
 
+<!-- Search Container: Contains the title of the page -->
     <div class="search-container">
         <h1 class="text-center">Plant Search</h1>
     </div>
@@ -16,11 +18,12 @@
                 <div id="plantSearch">
                     <input type="text" placeholder="Enter Plant Name: Ex: rose">
                     <button id="plantSearchBtn">
+                        <!-- Search icon from Font Awesome -->
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
             </div>
-            <!-- Results Section -->
+            <!-- Results Section: Displays Results -->
             <div class="plantResultsContainer">
                 <div id="plantData">    
                     {{#each simpleData.data as |plant|}}
@@ -54,7 +57,9 @@
                         <i class="fas fa-trash"></i>Delete All Plants
                     </button>
                 </div>
+                <!-- List of saved searches -->    
                 <div class="savedSearchList">
+                    <!-- Loop through each saved search using template engine -->    
                     {{#each savedSearchList}}
                         <p>{{this}}</p>
                     {{/each}}
@@ -63,4 +68,5 @@
         </div>
     </div>
 
+<!-- JavaScript file for handling plant search functionality -->
 <script src="/js/plantsearch.js"></script>

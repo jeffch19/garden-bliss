@@ -1,35 +1,44 @@
-New Update Post <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"/>
+<!-- New Update Post. Links for Styling -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="/css/new-update-post.handlebars.css">
 
+<!-- Main container for the post form, styled as a card -->
 <div id="post-form" class="card text-white bg-secondary mx-auto w-50 my-3 {{task}}">
+
+    <!-- Card header displaying the task (e.g., 'Create' or 'Update') -->
     <div class="card-header ">
         <h4>{{task}} Plant</h4>
     </div>
 
+    <!-- Card body containing input fields for creating or updating a post -->
     <div class="card-body">
         <div class="px-4 py-3">
+            <!-- Input field for post title -->
             <div class="mb-3">
                 <label for="post-title" class="form-label">Title</label>
                 <input type="text" class="form-control" id="post-title" placeholder="Title" value="{{post.title}}">
             </div>
+              <!-- Textarea for post body -->
             <div class="mb-3">
                 <label for="post-body" class="form-label">Post</label>
                 <textarea class="form-control" id="post-body" placeholder="Post">{{post.body}}</textarea> 
             </div>
-
+             <!-- Conditional content rendered if editing an existing post -->
             {{#if edit}}
+                <!-- Read-Only input showing who created the post -->
                 <div class="mb-3">
                     <label for="post-title" class="form-label">Created By</label>
                     <input readonly type="text" class="form-control" id="post-user_id" placeholder="User" value="{{user.name}}">
                 </div>
                 <div class="mb-3">
+                    <!-- Read-Only input showing when the post was created -->
                     <label for="post-title" class="form-label">Created At</label>
                     <input readonly type="text" class="form-control" id="post-created_at" placeholder="Post created at: Date/Time" value="{{post.createdAt}}">
                 </div>
             {{/if}}
-
+            <!-- Button for submitting the form (text changes based on context) -->
             <button id="createBtn" type="click" class="btn btn-dark">{{btntxt}}</button>
-
+            <!-- Delete button, conditionally displayed if editing an existing post -->
             {{#if edit}}
                 <button id="deleteBtn" type="click" class="btn btn-dark">delete</button>
             {{/if}}

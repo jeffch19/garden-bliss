@@ -15,7 +15,6 @@ body {
   min-height: 100vh;
 }
 
-/* Style the navigation links */
 /* Style the navigation bar */
 .container-fluid {
   width: 100%;
@@ -51,8 +50,8 @@ body {
 
 /* Form Styling */
 .list-group {
-  background-color:white;
-  width: 70%; 
+  background-color: transparent;
+  width: 90%; 
   margin-bottom: 20px;
 }
 
@@ -84,23 +83,78 @@ footer {
 }
 
 
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 1000px) {
   .list-group {
-    background-color:white;
-    width: 70%; 
+    background-color: transparent;
+    width: 90%; 
     margin-bottom: 20px;
   }
   
   .card-body {
     background-color: green;
-    width: 60%;
+    width: 70%;
   }
   
   .card-header {
     background-color: maroon;
   }
+}
 
+@media screen and (max-width: 766px) {
+  .list-group {
+    background-color: transparent;
+    width: 90%; 
+    margin-bottom: 20px;
+  }
+  
+  .card-body {
+    background-color: green;
+    width: 70%;
+  }
+  
+  .card-header {
+    background-color: maroon;
+  }
+}
 
+@media screen and (max-width: 628px) {
+  .navlinkcontainer {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  align-items: center;
+  white-space: nowrap;
+  padding-left: 0; 
+  padding: 5px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+  width: 100%;
+  height: 60px;
+}
 
+.nav-link {
+  text-decoration: none;
+  text-align: center;
+  color: darkgreen;
+  font-size: 20px;
+  font-weight: bold;
+  height: 50px;
+  width: 100%;
+}
 
+  .list-group {
+    background-color: transparent;
+    width: 70%; 
+    margin-bottom: 20px;
+  }
+
+  .card-body {
+    background-color: green;
+    width: 400px;
+  }
+  
+  .card-header {
+    background-color: maroon;
+    width: 400px;
+  }
 }
