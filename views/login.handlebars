@@ -1,29 +1,37 @@
+<!-- Links to Bootstrap CSS for styling and the Custom CSS file for additional styling.-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/css/login.css"> 
-  
+
+ <!-- Main container for the login form --> 
   <div class="container">
+    <!-- Flexbox container to center the login form horizontally -->
     <div class="d-flex justify-content-center">
+      <!-- Login form container -->
       <div class="login-form">
         <h1>Login</h1>
-        <form>  <!-- action="/api/users/login" method="POST"   Check login route -->
+        <form>
+          <!-- Form group for email input -->
           <div class="form-group card-body">
             <label for="email">Email</label>
             <input type="email" placeholder="" id="email" name="email" autocomplete="email" />
           </div>
+          <!-- Form group for password input -->
           <div class="form-group">
             <label for="password">Password</label>
             <input type="password" placeholder="" id="password" name="password" />
           </div>
+          <!-- Submit button for the form -->  
           <div class="form-group">
             <input type="submit" id="loginbtn" name="loginbtn" value="Submit" />
           </div>
         </form>
       </div>
     </div>
-        
+    <!-- Link to sign up page for users who don't have an account -->   
     <p class="para-2">
       Don't have an account? <a href="/signup">Sign Up Here</a>
     </p>
   </div>
 
+<!-- JavaScript for login functionality -->
 <script src="/js/login.js"></script>

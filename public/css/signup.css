@@ -45,19 +45,11 @@ body {
 /* Header and Navigation Styles */
     
 h1 {
-  font-size: 50px;
-  font-family: "Lucida Handwriting";
-  font-weight: bold;
-  color: white;
-  margin-top: 100px;
   text-align: center;
-}
-
-h1 {
+  font-weight: bolder;
+  font-family: Roboto;
+  margin-left: 120px;
   margin-top: 20px;
-  margin-left: 50px;
-  text-align: center;
-  color: black;
 }
 
 /* Style for the Form */
@@ -66,6 +58,7 @@ h1 {
   height: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0;
 }
 
