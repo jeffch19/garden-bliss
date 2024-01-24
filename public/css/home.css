@@ -6,7 +6,7 @@
 
 /* Apply background styles to the body */
 body {
-  background-image: url('images/gardenblisscover.png');
+  background-image: url('/css/images/gardenblisscover.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

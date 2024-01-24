@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: url('./images/waterpot.jpg');
+  background-image: url('/css/images/waterpot.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
