@@ -49,6 +49,7 @@ body {
 }
 
 /* Form Styling */
+
 .list-group {
   background-color: transparent;
   width: 90%; 
@@ -66,6 +67,12 @@ body {
 
 #viewBtn {
   background-color: maroon;
+}
+
+#newPostBtn {
+  margin-bottom: 80px;
+  background-color: red;
+  font-weight: bold;
 }
 
 footer {
@@ -150,11 +157,22 @@ footer {
 
   .card-body {
     background-color: green;
-    width: 400px;
+    width: 70%;
   }
   
   .card-header {
     background-color: maroon;
     width: 400px;
+  }
+}
+
+
+@media screen and (max-width: 628px) {
+  .list-group {
+    width: 90%;
+  }
+
+  .card-body {
+    width: 450px;
   }
 }
