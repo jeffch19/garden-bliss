@@ -222,3 +222,73 @@ footer {
 }
 
 }
+
+/* Media Queries */
+@media screen and (max-width: 435px) {
+  .container {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+.nav-link {
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 24px;
+  font-family: "Lucida Handwriting";
+  font-weight: bold;
+  margin-top: 12px;
+  color: white;
+  text-align: center;
+}
+
+.intro {
+  font-size: 18px;
+  font-family: "Lucida Handwriting";
+  font-weight: bolder;
+  color: White;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 20px;
+}  
+
+.left-section h2 {
+  font-size: 18px;
+  font-weight: bolder;
+  color: darkgreen;
+}
+
+.right-section h2 {
+  font-size: 18px;
+  font-weight: bolder;
+  color: darkgreen;
+}
+
+
+.left-section p {
+font-size: 14px;
+color: darkgreen;
+font-weight: bolder;
+}
+
+.right-section p {
+font-size: 14px;
+color: darkgreen;
+font-weight: bolder;
+margin-top: 10px;
+}
+
+
+footer {
+  justify-content: center;
+  font-size: 12px;
+  padding: 20px;
+}
+
+footer div {
+  text-align: center;
+  margin-right: 50px; /* Adjust the value as needed */
+  margin-left: 25px;
+}
+
+}

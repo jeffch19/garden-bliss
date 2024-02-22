@@ -51,18 +51,19 @@
         <!-- Right Section (Saved Searches and Delete Button) -->
         <div class="right-section">
             <div class="savedSearchContainer">
+                <!-- List of saved searches -->    
+                <div class="savedSearchList">
+                    <input type="text" placeholder="Searched List">
+                    <!-- Loop through each saved search using template engine -->    
+                    {{#each savedSearchList}}
+                        <p>{{this}}</p>
+                    {{/each}}
+                </div>
                 <!-- Delete Plants Button -->
                 <div class="deletePlants">
                     <button id="deletePlantsBtn">
                         <i class="fas fa-trash"></i>Delete All Plants
                     </button>
-                </div>
-                <!-- List of saved searches -->    
-                <div class="savedSearchList">
-                    <!-- Loop through each saved search using template engine -->    
-                    {{#each savedSearchList}}
-                        <p>{{this}}</p>
-                    {{/each}}
                 </div>
             </div>
         </div>

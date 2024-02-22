@@ -207,9 +207,19 @@ footer {
   }
 
   .search-container {
-    order:  1; /* Ensure the search container is first */
+   margin-top: 0;
   }
 
+  h1 {
+    font-size: 45px;
+    font-family: "Lucida Handwriting";
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+ 
   .left-section {
     order:  2; /* Ensure the left section (search results) is second */
   }
@@ -223,7 +233,8 @@ footer {
   }
 
   .left-section, .right-section {
-    width:  100%; /* Each section takes full width on smaller screens */
+    width:  80%; /* Each section takes full width on smaller screens */
+    height: 45%;
     max-width: none; /* Override any max-width set earlier */
     flex: none; /* Reset any flex-grow settings */
     margin:  0; /* Adjust margin as needed */
@@ -256,14 +267,14 @@ footer {
   }
 
   .left-section, .right-section {
-      width: 100%; /* Each section takes full width on smaller screens */
+      width: 80%; /* Each section takes full width on smaller screens */
       max-width: none; /* Override any max-width set earlier */
       flex: none; /* Reset any flex-grow settings */
       margin: 0; /* Adjust margin as needed */
       padding: 10px 0; /* Adjust padding as needed */
   }
 
-  .plantSearchInput {
+   .plantSearchInput {
     width: 100%;
   }
 
@@ -272,14 +283,12 @@ footer {
   }
 }
 
-
 @media screen and (max-width: 520px) {
   .nav-link {
     font-size: 14px;
     padding: 5px;
   }
   
-
   h1 {
     font-size: 24px;
     font-family: "Lucida Handwriting";
@@ -302,6 +311,7 @@ footer {
 
   .left-section, .right-section {
       width: 100%; /* Each section takes full width on smaller screens */
+      height: 40%;
       max-width: none; /* Override any max-width set earlier */
       flex: none; /* Reset any flex-grow settings */
       margin: 0; /* Adjust margin as needed */
@@ -314,11 +324,17 @@ footer {
   }
 
   #plantSearch input[type="text"] {
-    font-size: 18px;
+    font-size: 16px;
   }
 
-  #plantSearchBtn {
-    height: 56px;
+ #plantSearchBtn {
+    height: 52px;
+  }
+
+  #plantSearch {
+    display: flex;
+    align-items: center;
+    padding: 5px;
   }
 
   .plantResultsContainer {
@@ -333,22 +349,23 @@ footer {
     width: 100%; /* Full width for better readability */
     margin-bottom: 10px;
   }
+
+  footer div {
+    margin-left: 20px;
+    margin-right: 20px; /* Adjust the value as needed */
+  }
 }
 
 @media screen and (max-width: 420px) {
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
-  .nav-link {
+   .nav-link {
     font-size: 14px;
     padding: 4px;
+    white-space: none;
   }
   
 
   h1 {
-    font-size: 20px;
+    font-size: 24px;
     font-family: "Lucida Handwriting";
     font-weight: bold;
     color: white;
@@ -379,6 +396,16 @@ footer {
   .plantSearchInput {
     width: 100%;
   }
+  
+  #plantSearchBtn {
+      height: 48px;
+  }
+  
+  #plantSearch {
+   display: flex;
+   align-items: center;
+   padding: 5px;
+  }
 
   .plantResultsContainer {
     width: 100%;  
@@ -386,7 +413,7 @@ footer {
 
   #plantData {
     width: 100%;
-    justify-content: center;
+    margin: 0;
   }
 
   .savedSearchList {
@@ -395,6 +422,13 @@ footer {
     margin-bottom: 10px;
     overflow-y: scroll;
   }
+
+footer div {
+    margin-left: 20px;
+    margin-right: 20px; /* Adjust the value as needed */
+}
+
+
 }
 
 
