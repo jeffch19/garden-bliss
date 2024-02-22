@@ -37,6 +37,23 @@ function showError(message) {
     errorModal.style.display = 'block';
 }
 
+// Add event listener for the Enter key press in the search input
+plantSearchInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+      // Get the search term from the input field
+      let searchTerm = this.value.trim();
+      if (searchTerm !== '') {
+          searchPlants(searchTerm);
+          saveSearchTerm(searchTerm);
+          addSearchTermToUI(searchTerm);
+      } else {
+          alert('Please enter a plant name before searching.');
+      }
+    }
+  });
+
 // Function to save the search term to local storage
 function saveSearchTerm(searchTerm) {
     let savedSearchList = JSON.parse(localStorage.getItem('savedPlantSearches')) || [];

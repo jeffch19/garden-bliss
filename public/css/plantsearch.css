@@ -200,25 +200,42 @@ footer {
 }
 
 /* Media Query for smaller screens */
-@media (max-width: 768px) {
+/* Media query for smaller screens */
+@media (max-width:  768px) {
   .main-container {
-      flex-direction: column; /* Stack left and right sections vertically */
+    flex-direction: column; /* Stack left and right sections vertically */
+  }
+
+  .search-container {
+    order:  1; /* Ensure the search container is first */
+  }
+
+  .left-section {
+    order:  2; /* Ensure the left section (search results) is second */
+  }
+
+  .right-section {
+    order:  3; /* Ensure the right section (saved searches and delete button) is third */
+  }
+
+  .savedSearchList {
+    order:  4; /* Ensure the saved search list is last */
   }
 
   .left-section, .right-section {
-      width: 100%; /* Each section takes full width on smaller screens */
-      max-width: none; /* Override any max-width set earlier */
-      flex: none; /* Reset any flex-grow settings */
-      margin: 0; /* Adjust margin as needed */
-      padding: 10px 0; /* Adjust padding as needed */
+    width:  100%; /* Each section takes full width on smaller screens */
+    max-width: none; /* Override any max-width set earlier */
+    flex: none; /* Reset any flex-grow settings */
+    margin:  0; /* Adjust margin as needed */
+    padding:  10px  0; /* Adjust padding as needed */
   }
 
   .plantSearchInput {
-    width: 100%;
+    width:  100%;
   }
 
   .plantResultsContainer, .savedSearchList {
-      width: 100%; /* Full width for better readability */
+    width:  100%; /* Full width for better readability */
   }
 }
 
