@@ -161,12 +161,64 @@ footer {
 
 @media screen and (max-width: 500px) {
   .nav-link {
-    font-size: 18px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 30px;
+    font-family: "Lucida Handwriting";
+    font-weight: bold;
+    margin-top: 16px;
+    color: white;
+    text-align: center;
   }
   
+  .intro {
+    font-size: 18px;
+    font-family: "Lucida Handwriting";
+    font-weight: bolder;
+    color: White;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px;
+  }  
+
+  .left-section h2 {
+    font-size: 20px;
+    font-weight: bolder;
+    color: darkgreen;
+  }
+  
+  .right-section h2 {
+    font-size: 20px;
+    font-weight: bolder;
+    color: darkgreen;
+  }
+  
+  
+.left-section p {
+  font-size: 16px;
+  color: darkgreen;
+  font-weight: bolder;
+}
+
+.right-section p {
+  font-size: 16px;
+  color: darkgreen;
+  font-weight: bolder;
+  margin-top: 10px;
+}
+
+
   footer {
-    font-size: 14px;
+    font-size: 12px;
     padding: 10px;
   }
-  
+
+  footer div {
+    margin-right: 20px; /* Adjust the value as needed */
+    margin-left: 20px;
+}
+
 }

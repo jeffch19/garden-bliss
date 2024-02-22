@@ -119,7 +119,7 @@ h1 {
 
 /* Style for the results-container */
   .plantResultsContainer {
-   overflow: auto;
+   overflow-y: auto;
 }
 
 #plantData {
@@ -129,7 +129,7 @@ h1 {
   padding-top: 20px;
   border: 3px solid green;
   border-radius: 12px;
-  overflow:scroll; /* Add scrollbar if content overflows */
+  overflow-y:scroll; /* Add scrollbar if content overflows */
 }
 
 #plantData p {
@@ -140,7 +140,7 @@ h1 {
   
 /* Style for the saved search container */
 .savedSearchContainer {
-  overflow: auto;
+  overflow-y: auto;
 }
 
 /* Style for the saved search list */
@@ -234,11 +234,6 @@ footer {
 }
 
 @media screen and (max-width: 557px) {
-  body {
-    background-image: none;
-    background-color: goldenrod;
-  }
-
   .main-container {
       flex-direction: column; /* Stack left and right sections vertically */
   }
@@ -267,6 +262,18 @@ footer {
     padding: 5px;
   }
   
+
+  h1 {
+    font-size: 24px;
+    font-family: "Lucida Handwriting";
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    flex: 1; /* Center the title */
+  }
+
   footer {
     font-size: 12px;
     padding: 5px;
@@ -285,7 +292,7 @@ footer {
   }
 
   .plantSearchInput {
-    width: 100%;
+    width: 80%;
     height: 56px;
   }
 
@@ -317,16 +324,24 @@ footer {
     padding: 0;
   }
 
-  body {
-    background-image: none;
-    background-color: lightsalmon;
-  }
-
   .nav-link {
     font-size: 14px;
     padding: 4px;
   }
   
+
+  h1 {
+    font-size: 20px;
+    font-family: "Lucida Handwriting";
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    flex: 1; /* Center the title */
+  }
+
+
   footer {
     font-size: 12px;
     padding: 5px;
@@ -354,6 +369,7 @@ footer {
 
   #plantData {
     width: 100%;
+    justify-content: center;
   }
 
   .savedSearchList {
@@ -363,4 +379,5 @@ footer {
     overflow-y: scroll;
   }
 }
+
 
