@@ -33,6 +33,7 @@ body {
     align-items: center;
     padding-left: 0; 
     padding: 10px;
+    box-sizing: border-box;
     width: 100%;
 }
   
@@ -110,6 +111,7 @@ footer {
   
     .navlinkcontainer {
         width: 100%;
+        box-sizing: border-box;
         display: flex;
         list-style-type: none;
         justify-content: center;
@@ -158,11 +160,12 @@ footer {
   
     .navlinkcontainer {
         display: flex;
+        box-sizing: border-box;
         list-style-type: none;
         justify-content: center;
         align-items: center;
         padding-left: 0; 
-        padding: 4px;
+        padding: 20px;
         width: 100%;
     }  
 
@@ -193,7 +196,7 @@ footer {
     footer {
         width: 100%;
         font-size: 12px;
-        padding: 8px;      
+        padding: 20px;      
     }
 }
   

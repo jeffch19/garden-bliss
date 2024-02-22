@@ -65,7 +65,7 @@ h1 {
 .signup-form {
   width: 40%;
   height: 620px; /* Adjust height to accommodate the new Username field */
-  margin-top: 40px;
+  margin-top: 25px;
   background-color: white;
   border-radius: 10px;
 }
