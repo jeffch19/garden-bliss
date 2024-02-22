@@ -47,5 +47,5 @@ As a gardening enthusiast, I want to use an interactive tool that allows me to p
 * Authentication: Passport.js for user authentication
 * External APIs (Optional): Integrate weather APIs for real-time climate data to provide accurate seasonal recommendations.
 
-Deployed: https://github.com/jeffch19/garden-bliss.git
-GitHub repo: https://jeffch19.github.io/garden-bliss/ 
+Deployed: https://garden-planner19-05823e4485e2.herokuapp.com/ 
+GitHub repo: https://github.com/jeffch19/garden-bliss.git
