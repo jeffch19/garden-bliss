@@ -44,7 +44,6 @@ As a gardening enthusiast, I want to use an interactive tool that allows me to p
 * Frontend: HTML, CSS, JavaScript 
 * Backend: Node.js with Express.js for API
 * Database: MySQL or PostgreSQL with Sequelize for data storage and retrieval
-* Authentication: Passport.js for user authentication
 * External APIs (Optional): Integrate weather APIs for real-time climate data to provide accurate seasonal recommendations.
 
 Deployed: https://garden-planner19-05823e4485e2.herokuapp.com/ 
