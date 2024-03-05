@@ -28,10 +28,10 @@ router.get('/species/:species_id', async (req, res) => {
   }
 });
 
-router.get('/plantsearch', (req, res) => {
-  res.render('plantsearch', {
-    // Any data you want to pass to the template
-  });
-});
+// router.get('/plantsearch', (req, res) => {
+//   res.render('plantsearch', {
+//     // Any data you want to pass to the template
+//   });
+// });
 
 module.exports = router;

@@ -33,7 +33,11 @@ router.get('/signup', (req, res) => {
 router.get('/tips', (req, res) => {
   res.render('tips');
 });
-  
+router.get('/plantsearch', (req, res) => {
+    res.render('plantsearch', {
+      // Any data you want to pass to the template
+    });
+  });
   //will need to add a withauth
   router.get('/plantsearchresults/:name', async (req, res) => {
     try {
