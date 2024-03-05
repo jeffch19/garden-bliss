@@ -6,7 +6,7 @@ export async function fetchSpeciesList() {
   };
 
   try{
-    const response = await fetch('https://perenual.com/api/species-list?key=sk-dCkw65936680487233623', requestOptions);
+    const response = await fetch('/api/plant/list', requestOptions);
 
     if (response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -25,7 +25,7 @@ export async function fetchSpeciesDetails(speciesId) {
   };
 
   try {
-    const response = await fetch (`https://perenual.com/api/species/details/${speciesId}?key=sk-dCkw65936680487233623`, requestOptions);
+    const response = await fetch (`/api/plant/species/${speciesId}`, requestOptions);
 
     if (!response.ok) {
       throw new Error (`HTTP error! Status: ${response.status}`);
